@@ -1,0 +1,52 @@
+body {
+    margin: 0 20vw;
+}
+
+footer {
+    height:33vh;
+}
+
+img {
+    max-width: 100%;
+}
+
+#me-section {
+    height: 100vh;
+}
+
+.me-content {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    height: 66vh;
+}
+
+.me-cta {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 33vh;
+    justify-content: center;
+}
+
+.technos-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.tools-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill {
+    display: flex;
+    flex-direction: row;
+}
+
+.skill-category {
+    display: flex;
+}
