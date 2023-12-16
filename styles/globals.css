@@ -1,9 +1,33 @@
+@import "animations.css";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat");
+
+#about-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 10vh;
+    text-align: center;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
 body {
     margin: 0 20vw;
 }
 
+.cta-chevron {
+    animation: slow-vertical-shake 10s cubic-bezier(0.445, 0.050, 0.550, 0.950) infinite both;
+    -webkit-animation: slow-vertical-shake 10s cubic-bezier(0.445, 0.050, 0.550, 0.950) infinite both;
+}
+
 footer {
     height:33vh;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 img {
@@ -11,14 +35,15 @@ img {
 }
 
 #me-section {
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .me-content {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-    height: 66vh;
 }
 
 .me-cta {
@@ -26,20 +51,12 @@ img {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    height: 33vh;
+    row-gap: 1.25vh;
     justify-content: center;
 }
 
-.technos-container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-.tools-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+section {
+    min-height: 100vh;
 }
 
 .skill {
@@ -49,4 +66,59 @@ img {
 
 .skill-category {
     display: flex;
+}
+
+.technos-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+h2 {
+    align-items: center;
+    display: flex;
+    margin: 0;
+    text-align: left;
+}
+
+h2 > span {
+    font-size: xx-large;
+    padding-right: 1vw;
+}
+
+h3, h4 {
+    margin: 0;
+}
+
+.p-timeline-event {
+    min-height: 7.5rem;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    line-height: 1.75rem;
+}
+
+.text-container > p {
+    margin: 0 2vw;
+}
+
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.timeline-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.tools-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
