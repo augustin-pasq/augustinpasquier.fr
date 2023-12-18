@@ -9,7 +9,8 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding-top: 10vh;
+    margin-top: 4vh;
+    padding-top: 8vh;
     text-align: center;
 }
 
@@ -97,7 +98,8 @@ section {
 .skill-level {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    justify-content: space-between;
+    margin-left: 0.5rem;
 }
 
 .technos-container {

@@ -99,7 +99,7 @@ export default function Home() {
 
                 <div className="text-container">
                     <p>
-                        Grâce à mes projets personnels, universitaires et professionnels, j'ai appris à me servir de tout un tas de langages et outils. À l'aise avec certaines, envieux de progresser dans d'autres, je suis autonome avec (du moins je connais un peu) la plupart des technologies ci-dessous.
+                        Grâce à mes projets personnels, universitaires et professionnels, j'ai appris à me servir de tout un tas de langages et outils. À l'aise avec certaines, envieux de progresser dans d'autres, j'ai déjà utilisé toutes ces technologies.
                     </p>
                 </div>
 
