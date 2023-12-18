@@ -1,16 +1,16 @@
 @import "animations.css";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat");
 
-#about-section {
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#about-section, #skills-section {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     padding-top: 10vh;
     text-align: center;
-}
-
-* {
-    font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -24,6 +24,23 @@ body {
 
 footer {
     height:33vh;
+}
+
+h2 {
+    align-items: center;
+    display: flex;
+    margin: 0;
+    text-align: left;
+}
+
+h2 > span {
+    font-size: xx-large;
+    padding-right: 1vw;
+}
+
+h3 {
+    font-size: large;
+    margin: 0;
 }
 
 html {
@@ -55,6 +72,10 @@ img {
     justify-content: center;
 }
 
+.p-timeline-event {
+    min-height: 7.5rem;
+}
+
 section {
     min-height: 100vh;
 }
@@ -62,36 +83,28 @@ section {
 .skill {
     display: flex;
     flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    text-align: left;
+    padding: 2rem;
+    width: 25%;
 }
 
-.skill-category {
+.skill > svg {
+    height: 3rem;
+}
+
+.skill-level {
     display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .technos-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
-}
-
-h2 {
-    align-items: center;
-    display: flex;
-    margin: 0;
-    text-align: left;
-}
-
-h2 > span {
-    font-size: xx-large;
-    padding-right: 1vw;
-}
-
-h3, h4 {
-    margin: 0;
-}
-
-.p-timeline-event {
-    min-height: 7.5rem;
+    row-gap: 3rem;
 }
 
 .text-container {
@@ -108,13 +121,22 @@ h3, h4 {
 .timeline-container {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 1.5rem;
+}
+
+.timeline-date {
+    font-weight: bold;
 }
 
 .timeline-item {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+}
+
+.timeline-item > p {
+    line-height: 1.5rem;
+    margin: 0;
 }
 
 .tools-container {

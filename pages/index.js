@@ -15,32 +15,16 @@ const events = [
     {date: "Décembre 2023", text: "Participation à l'édition 2023 de l'évènement \"La Nuit de l'Info\""}
 ]
 
-const skills = {
-    web_dev: {
-        title: "Développement web",
-        content: [
-            {name: "HTML/CSS", value: 5, logo: "html"},
-            {name: "JavaScript", value: 4, logo: "javascript"},
-            {name: "PHP", value: 4, logo: "php"},
-            {name: "React.js", value: 4, logo: "react"}
-        ]
-    },
-    app_dev: {
-        title: "Développement applicatif",
-        content: [
-            {name: "Java", value: 3, logo: "java"},
-            {name: "Python", value: 3, logo: "python"},
-            {name: "Développement Android (Java)", value: 2, logo: "android"}
-        ]
-    },
-    databases: {
-        title: "Bases de données",
-        content: [
-            {name: "SQL (MySQL, Oracle, SQLite)", value: 4, logo: "mysql"},
-            {name: "NoSQL (MongoDB)", value: 2, logo: "mongodb"}
-        ]
-    }
-}
+const skills = [
+    {name: "HTML/CSS", value: 5, logo: "html"},
+    {name: "JavaScript", value: 4, logo: "javascript"},
+    {name: "PHP", value: 4, logo: "php"},
+    {name: "React.js", value: 4, logo: "react"},
+    {name: "SQL", value: 4, logo: "mysql"},
+    {name: "Java", value: 3, logo: "java"},
+    {name: "Python", value: 3, logo: "python"},
+    {name: "Android (Java)", value: 2, logo: "android"},
+]
 
 const tools = [
     {name: "Linux", logo: "linux"},
@@ -56,8 +40,8 @@ export default function Home() {
     const customizedContent = (item) => {
         return (
             <div className="timeline-item">
-                <h4>{item.date}</h4>
-                <span>{item.text}</span>
+                <span className="timeline-date">{item.date}</span>
+                <p>{item.text}</p>
             </div>
         )
     }
@@ -108,27 +92,16 @@ export default function Home() {
                 </div>
             </section>
 
-            <section id="tools-section">
-                <h2>🔧 Des compétences et des outils</h2>
+            <section id="skills-section">
+                <h2><span>🔧</span>Des compétences et des outils</h2>
                 <div className="technos-container">
-                    {Object.keys(skills).map((category, categoryIndex) => {
+                    {skills.map((skill, skillIndex) => {
                         return (
-                            <div key={categoryIndex}>
-                                <h3>{skills[category].title}</h3>
-                                <div className="skill-category">
-                                    {skills[category].content.map((skill, skillIndex) => {
-                                        return (
-                                            <div key={skillIndex} className="skill col-3">
-                                                <div className="col-3">
-                                                    <SvgFactory item={skill.logo}/>
-                                                </div>
-                                                <div className="col-9">
-                                                    <span>{skill.name}</span>
-                                                    <Rating value={skill.value} cancel={false} readOnly/>
-                                                </div>
-                                            </div>
-                                        )
-                                    })}
+                            <div key={skillIndex} className="skill">
+                                <SvgFactory item={skill.logo}/>
+                                <div className="skill-level">
+                                    <span>{skill.name}</span>
+                                    <Rating value={skill.value} cancel={false} readOnly/>
                                 </div>
                             </div>
                         )
@@ -136,11 +109,10 @@ export default function Home() {
                 </div>
 
                 <div className="tools-container">
-                    <h3 className="col-12">Outils</h3>
                     {tools.map((tool, index) => {
                         return (
                             <div key={index} className="col-2">
-                                <SvgFactory item={tool.logo} />
+                                <SvgFactory item={tool.logo}/>
                                 <span>{tool.name}</span>
 
                             </div>
