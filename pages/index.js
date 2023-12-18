@@ -77,6 +77,7 @@ export default function Home() {
 
             <section id="about-section" ref={about}>
                 <h2><span>💡</span>Tout commence avec un ruban LED...</h2>
+
                 <div className="text-container">
                     <p>
                         En classe de troisième, je me vois mener un projet scolaire dont l'un des objectifs était de
@@ -86,6 +87,7 @@ export default function Home() {
                     </p>
                     <span>Depuis, j'enchaîne les projets et m'investis à fond dans ma passion !</span>
                 </div>
+
                 <div className="timeline-container">
                     <h3>Coup d'œil sur mon parcours</h3>
                     <Timeline value={events} align="alternate" className="customized-timeline" content={customizedContent}/>
@@ -94,6 +96,13 @@ export default function Home() {
 
             <section id="skills-section">
                 <h2><span>🔧</span>Des compétences et des outils</h2>
+
+                <div className="text-container">
+                    <p>
+                        Grâce à mes projets personnels, universitaires et professionnels, j'ai appris à me servir de tout un tas de langages et outils. À l'aise avec certaines, envieux de progresser dans d'autres, je suis autonome avec (du moins je connais un peu) la plupart des technologies ci-dessous.
+                    </p>
+                </div>
+
                 <div className="technos-container">
                     {skills.map((skill, skillIndex) => {
                         return (
@@ -111,7 +120,7 @@ export default function Home() {
                 <div className="tools-container">
                     {tools.map((tool, index) => {
                         return (
-                            <div key={index} className="col-2">
+                            <div key={index} className="tool">
                                 <SvgFactory item={tool.logo}/>
                                 <span>{tool.name}</span>
 
