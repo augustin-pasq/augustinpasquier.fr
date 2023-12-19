@@ -84,6 +84,7 @@ section {
 .skill {
     display: flex;
     flex-direction: row;
+    font-weight: bold;
     gap: 1rem;
     justify-content: center;
     text-align: left;
@@ -144,6 +145,7 @@ section {
 .tool {
     display: flex;
     flex-direction: column;
+    font-weight: bold;
     gap: 1rem;
 }
 
