@@ -1,26 +1,20 @@
-@import "animations.css";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat");
 
 * {
     font-family: 'Montserrat', sans-serif;
 }
 
-#about-section, #skills-section {
+#about-section, #skills-section, #projects-section {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    margin-top: 4vh;
-    padding-top: 8vh;
+    margin-top: 10vh;
+    padding-top: 10vh;
     text-align: center;
 }
 
 body {
     margin: 0 20vw;
-}
-
-.cta-chevron {
-    animation: slow-vertical-shake 10s cubic-bezier(0.445, 0.050, 0.550, 0.950) infinite both;
-    -webkit-animation: slow-vertical-shake 10s cubic-bezier(0.445, 0.050, 0.550, 0.950) infinite both;
 }
 
 footer {
@@ -55,6 +49,7 @@ img {
 #me-section {
     display: flex;
     flex-direction: column;
+    height: 100vh;
     justify-content: space-evenly;
 }
 
@@ -73,12 +68,67 @@ img {
     justify-content: center;
 }
 
+.no-repository {
+    cursor: default;
+}
+
+.p-tabview-nav-link {
+    justify-content: center;
+}
+
 .p-timeline-event {
     min-height: 7.5rem;
 }
 
-section {
-    min-height: 100vh;
+.p-unselectable-text {
+    width: 100%;
+}
+
+
+.projects-container {
+    column-gap: calc(((100vw - 2*20vw - 2*1.25rem - 3*31.5% - 6px) / 2) - 6px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
+    row-gap: 2rem;
+}
+
+.project {
+    align-items: center;
+    background: #f3f4f6;
+    border: solid 1px #e5e7eb;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    justify-content: center;
+    padding: 1.8rem;
+    transition: 0.3s;
+    width: 31.5%;
+}
+
+.project:hover {
+    background: #ffffff;
+    border-color: #ffffff;
+    box-shadow: 0 5px 22px 12px rgba(17, 24, 39, 0.15);
+}
+
+.project-name {
+    font-weight: bold;
+}
+
+.project-description {
+    font-size: 0.85rem;
+}
+
+.project-technos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
 }
 
 .skill {
@@ -145,7 +195,6 @@ section {
 .tool {
     display: flex;
     flex-direction: column;
-    font-weight: bold;
     gap: 1rem;
 }
 
@@ -156,5 +205,5 @@ section {
 .tools-container {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 3rem;
+    margin: 3rem 0;
 }
