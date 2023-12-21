@@ -5,7 +5,6 @@ import {TabPanel, TabView} from "primereact/tabview"
 import {Tag} from "primereact/tag"
 import {Timeline} from "primereact/timeline"
 import {useRef} from "react"
-import {useRouter} from "next/router"
 
 const events = [
     { date: "Janvier 2018", text: "Stage de découverte de troisième dans une boutique de support informatique" },
@@ -38,125 +37,135 @@ const tools = [
 ]
 
 const projects = {
-    personals: [
-        {
-            name: "LJDP (wip)",
-            technos: ["React.js", "Next.js", "Prisma", "MySQL"],
-            description: "Jeu multijoueur en ligne de devinettes à base de photos",
-            repositoryName: null
-        },
-        {
-            name: "augustinpasquier.fr",
-            technos: ["React.js", "Next.js"],
-            description: "Portfolio",
-            repositoryName: "augustinpasquier.fr"
-        },
-        {
-            name: "Nuit de l'Info 2023",
-            technos: ["React.js", "PHP"],
-            description: "Application web produite à l'édition 2023 de la Nuit de l'Info",
-            repositoryName: "nuit-info-2023"
-        },
-        {
-            name: "TBO",
-            technos: ["React.js"],
-            description: "Décompte avant le retour en période d'entreprise durant l'alternance",
-            repositoryName: "TBO"
-        },
-        {
-            name: "Test Technique Alternance",
-            technos: ["Android (Java)"],
-            description: "Application Android produite pour un test technique lors de la recherche d'alternance",
-            repositoryName: "Test-Technique-Alternance"
-        },
-        {
-            name: "Patrick Sébastien",
-            technos: ["JavaScript"],
-            description: "Bot Discord pour souhaiter les anniversaires et faire du bruit dans les salons vocaux",
-            repositoryName: "Patrick-Sebastien"
-        },
-        {
-            name: "Évelyne Dhéliat",
-            technos: ["JavaScript"],
-            description: "Bot Discord de prévisions météos",
-            repositoryName: "Evelyne-Dheliat"
-        }
-    ],
-    university: [
-        {
-            name: "Punto",
-            technos: ["React.js", "Next.js", "Prisma", "MySQL", "MongoDB", "SQLite", "Neo4j"],
-            description: "Implémentation du jeu de société Punto avec 4 bases de données",
-            repositoryName: "Punto"
-        },
-        {
-            name: "Application ToDo Android",
-            technos: ["Android (Java)"],
-            description: "Application Android de gestion des taches (ToDo-List)",
-            repositoryName: "Application-ToDo-Android"
-        },
-        {
-            name: "Application ToDo Web",
-            technos: ["Vue.js"],
-            description: "Application web de gestion des taches (ToDo-List)",
-            repositoryName: "Application-ToDo-Web"
-        },
-        {
-            name: "Convertisseur de température",
-            technos: ["Android (Java)"],
-            description: "Application Android pour convertir les degrés Celsius en Fahrenheit (et inversement)",
-            repositoryName: "Convertisseur-Temperature"
-        },
-        {
-            name: "Application Météo",
-            technos: ["HTML/CSS/JavaScript", "Vue.js"],
-            description: "Application web de prévisions météo",
-            repositoryName: "Application-Meteo"
-        },
-        {
-            name: "Projet NoSQL",
-            technos: ["React.js", "Next.js", "Prisma", "MongoDB"],
-            description: "Panneau d'administration/Catalogue pour un concessionaire automobile",
-            repositoryName: "Projet-NoSQL"
-        },
-        {
-            name: "SportTrack",
-            technos: ["HTML/CSS", "Express.js", "PHP", "SQLite"],
-            description: "Application web de suivi d'activités sportives",
-            repositoryName: "SportTrack"
-        },
-        {
-            name: "PNR",
-            technos: ["Java", "JavaFX", "MySQL"],
-            description: "Application de bureau de saisie d'observations de faune locale",
-            repositoryName: "SAE-PNR"
-        },
-        {
-            name: "Collège Numérique 56",
-            technos: ["HTML/CSS/JavaScript"],
-            description: "Site vitrine pour l'opération Collège Numérique 56",
-            repositoryName: "College-Numerique-56"
-        }
-    ],
-    work: [
-        {
-            name: "Imagina",
-            technos: ["React.js", "Symfony", "PHP", "Doctrine", "Android (Kotlin)", "HTML/CSS/JavaScript"],
-            description: "Contribution aux applications web et Android Imagina ainsi qu'au site vitrine de l'entreprise",
-            repositoryName: null
-        }
-    ]
+    personals: {
+        tabTitle: "Projets personnels",
+        content: [
+            {
+                name: "LJDP (wip)",
+                technos: ["React.js", "Next.js", "Prisma", "MySQL"],
+                description: "Jeu multijoueur en ligne de devinettes à base de photos",
+                repositoryName: null
+            },
+            {
+                name: "augustinpasquier.fr",
+                technos: ["React.js", "Next.js"],
+                description: "Portfolio",
+                repositoryName: "augustinpasquier.fr"
+            },
+            {
+                name: "Nuit de l'Info 2023",
+                technos: ["React.js", "PHP"],
+                description: "Application web produite à l'édition 2023 de la Nuit de l'Info",
+                repositoryName: "nuit-info-2023"
+            },
+            {
+                name: "TBO",
+                technos: ["React.js"],
+                description: "Décompte avant le retour en période d'entreprise durant l'alternance",
+                repositoryName: "TBO"
+            },
+            {
+                name: "Test Technique Alternance",
+                technos: ["Android (Java)"],
+                description: "Application Android produite pour un test technique lors de la recherche d'alternance",
+                repositoryName: "Test-Technique-Alternance"
+            },
+            {
+                name: "Patrick Sébastien",
+                technos: ["JavaScript"],
+                description: "Bot Discord pour souhaiter les anniversaires et faire du bruit dans les salons vocaux",
+                repositoryName: "Patrick-Sebastien"
+            },
+            {
+                name: "Évelyne Dhéliat",
+                technos: ["JavaScript"],
+                description: "Bot Discord de prévisions météos",
+                repositoryName: "Evelyne-Dheliat"
+            }
+        ]
+    },
+    university: {
+        tabTitle: "Projets universitaires",
+        content: [
+            {
+                name: "Punto",
+                technos: ["React.js", "Next.js", "Prisma", "MySQL", "MongoDB", "SQLite", "Neo4j"],
+                description: "Implémentation du jeu de société Punto avec 4 bases de données",
+                repositoryName: "Punto"
+            },
+            {
+                name: "Application ToDo Android",
+                technos: ["Android (Java)"],
+                description: "Application Android de gestion des taches (ToDo-List)",
+                repositoryName: "Application-ToDo-Android"
+            },
+            {
+                name: "Application ToDo Web",
+                technos: ["Vue.js"],
+                description: "Application web de gestion des taches (ToDo-List)",
+                repositoryName: "Application-ToDo-Web"
+            },
+            {
+                name: "Convertisseur de température",
+                technos: ["Android (Java)"],
+                description: "Application Android pour convertir les degrés Celsius en Fahrenheit (et inversement)",
+                repositoryName: "Convertisseur-Temperature"
+            },
+            {
+                name: "Application Météo",
+                technos: ["HTML/CSS/JavaScript", "Vue.js"],
+                description: "Application web de prévisions météo",
+                repositoryName: "Application-Meteo"
+            },
+            {
+                name: "Projet NoSQL",
+                technos: ["React.js", "Next.js", "Prisma", "MongoDB"],
+                description: "Panneau d'administration/Catalogue pour un concessionaire automobile",
+                repositoryName: "Projet-NoSQL"
+            },
+            {
+                name: "SportTrack",
+                technos: ["HTML/CSS", "Express.js", "PHP", "SQLite"],
+                description: "Application web de suivi d'activités sportives",
+                repositoryName: "SportTrack"
+            },
+            {
+                name: "PNR",
+                technos: ["Java", "JavaFX", "MySQL"],
+                description: "Application de bureau de saisie d'observations de faune locale",
+                repositoryName: "SAE-PNR"
+            },
+            {
+                name: "Collège Numérique 56",
+                technos: ["HTML/CSS/JavaScript"],
+                description: "Site vitrine pour l'opération Collège Numérique 56",
+                repositoryName: "College-Numerique-56"
+            }
+        ]
+    },
+    professionals: {
+        tabTitle: "Projets professionnels",
+        content: [
+            {
+                name: "Imagina",
+                technos: ["React.js", "Symfony", "PHP", "Doctrine", "Android (Kotlin)", "HTML/CSS/JavaScript"],
+                description: "Contribution aux applications web et Android Imagina ainsi qu'au site vitrine de l'entreprise",
+                repositoryName: null
+            }
+        ]
+    }
 }
 
 export default function Home() {
     const about = useRef(null)
-    const router = useRouter()
 
     const customizedContent = (item) => {
-        return (<div className="timeline-item">
-            <span className="timeline-date">{item.date}</span>
-            <p>{item.text}</p>
-        </div>)
+        return (
+            <div className="timeline-item">
+                <span className="timeline-date">{item.date}</span>
+                <p>{item.text}</p>
+            </div>
+        )
     }
 
     return (<>
@@ -203,8 +212,7 @@ export default function Home() {
 
                 <div className="timeline-container">
                     <h3>Coup d'œil sur mon parcours</h3>
-                    <Timeline value={events} align="alternate" className="customized-timeline"
-                              content={customizedContent}/>
+                    <Timeline value={events} align="alternate" className="customized-timeline" content={customizedContent}/>
                 </div>
             </section>
 
@@ -256,53 +264,27 @@ export default function Home() {
                 </div>
 
                 <TabView>
-                    <TabPanel header="Projets personnels">
-                        <div className="projects-container">
-                            {projects.personals.map((project, projectIndex) => (
-                                <div key={projectIndex} className={project.repositoryName ? "project cursor-pointer" : "project no-repository"} onClick={() => project.repositoryName ? router.push(`https://github.com/augustin-pasq/${project.repositoryName}`) : ""}>
-                                    <span className="project-name">{project.name}</span>
-                                    <div className="project-technos">
-                                        {project.technos.map((techno, technoIndex) => (
-                                            <Tag key={technoIndex} value={`${techno}`} rounded></Tag>
-                                        ))}
-                                    </div>
-                                    <span className="project-description">{project.description}</span>
+                    {Object.keys(projects).map((category, index) => {
+                        return (
+                            <TabPanel header={projects[category].tabTitle} key={index}>
+                                <div className="projects-container">
+                                    {projects[category].content.map((project, projectIndex) => {
+                                        return (
+                                            <div key={projectIndex} className={project.repositoryName ? "project cursor-pointer" : "project no-repository"} onClick={() => project.repositoryName ? window.open(`https://github.com/augustin-pasq/${project.repositoryName}`) : ""}>
+                                                <span className="project-name">{project.name}</span>
+                                                <div className="project-technos">
+                                                    {project.technos.map((techno, technoIndex) => (
+                                                        <Tag key={technoIndex} value={`${techno}`} rounded></Tag>
+                                                    ))}
+                                                </div>
+                                                <span className="project-description">{project.description}</span>
+                                            </div>
+                                        )
+                                    })}
                                 </div>
-                            ))}
-                        </div>
-                    </TabPanel>
-
-                    <TabPanel header="Projets universitaires">
-                        <div className="projects-container">
-                            {projects.university.map((project, projectIndex) => {
-                                return (<div key={projectIndex} className="project">
-                                    <span className="project-name">{project.name}</span>
-                                    <div className="project-technos">
-                                        {project.technos.map((techno, technoIndex) => {
-                                            return (<Tag key={technoIndex} value={`${techno}`} rounded></Tag>)
-                                        })}
-                                    </div>
-                                    <span className="project-description">{project.description}</span>
-                                </div>)
-                            })}
-                        </div>
-                    </TabPanel>
-
-                    <TabPanel header="Projets professionnels">
-                        <div className="projects-container">
-                            {projects.work.map((project, projectIndex) => {
-                                return (<div key={projectIndex} className="project">
-                                    <span className="project-name">{project.name}</span>
-                                    <div className="project-technos">
-                                        {project.technos.map((techno, technoIndex) => {
-                                            return (<Tag key={technoIndex} value={`${techno}`} rounded></Tag>)
-                                        })}
-                                    </div>
-                                    <span className="project-description">{project.description}</span>
-                                </div>)
-                            })}
-                        </div>
-                    </TabPanel>
+                            </TabPanel>
+                        )
+                    })}
                 </TabView>
             </section>
         </main>
