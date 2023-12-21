@@ -79,7 +79,7 @@ const projects = {
             {
                 name: "Évelyne Dhéliat",
                 technos: ["JavaScript"],
-                description: "Bot Discord de prévisions météos",
+                description: "Bot Discord de prévisions météo",
                 repositoryName: "Evelyne-Dheliat"
             }
         ]
