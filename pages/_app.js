@@ -1,3 +1,4 @@
+import "@/styles/form.css"
 import "@/styles/globals.css"
 import "primeflex/primeflex.css"
 import "primeicons/primeicons.css"
