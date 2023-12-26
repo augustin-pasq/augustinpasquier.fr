@@ -5,6 +5,7 @@ import {TabPanel, TabView} from "primereact/tabview"
 import {Tag} from "primereact/tag"
 import {Timeline} from "primereact/timeline"
 import {useRef} from "react"
+import {TypeAnimation} from "react-type-animation";
 
 const events = [
     { date: "Janvier 2018", text: "Stage de découverte de troisième dans une boutique de support informatique" },
@@ -179,17 +180,25 @@ export default function Home() {
         <main id="home">
             <section id="me-section">
                 <div className="me-content">
-                    <div className="col-8">
-                        <span>👋</span>
-                        <h1>Je suis <span>Augustin Pasquier</span></h1>
-                        <span>Développeur</span>
+                    <div className="text-container">
+                        <span className="pre-title"><span>👋</span>, moi c'est</span>
+                        <h1>Augustin Pasquier</h1>
+                        <span className="post-title">et je suis 
+                            <TypeAnimation
+                                sequence={[
+                                    "étudiant en BUT informatique", 1500,
+                                    "alternant développeur web", 1500,
+                                    "passionné d'informatique", 1500,
+                                ]}
+                                preRenderFirstString={true}
+                                speed={50}
+                                repeat={Infinity}/>
+                        </span>
                     </div>
-                    <div className="col-4">
-                        <picture>
-                            <source srcSet="/images/profile_picture.webp"/>
-                            <img src="/images/profile_picture.png" alt="Photo de profil"/>
-                        </picture>
-                    </div>
+                    <picture>
+                        <source srcSet="/images/profile_picture_no-background.webp"/>
+                        <img src="/images/profile_picture_no-background.png" alt="Photo de profil"/>
+                    </picture>
                 </div>
                 <div className="me-cta">
                     <span>Apprenez-en plus sur moi !</span>
@@ -207,13 +216,10 @@ export default function Home() {
                         Ce projet, c'est ma première confrontation à la programmation. C'est aussi le déclic qui me fera
                         prendre conscience que c'est dans cette discipline que je veux m'illustrer.
                     </p>
-                    <span>Depuis, j'enchaîne les projets et m'investis à fond dans ma passion !</span>
+                    <span>Depuis, j'enchaîne les projets et m'investis à fond dans ma passion :</span>
                 </div>
 
-                <div className="timeline-container">
-                    <h3>Coup d'œil sur mon parcours</h3>
-                    <Timeline value={events} align="alternate" className="customized-timeline" content={customizedContent}/>
-                </div>
+                <Timeline value={events} align="alternate" className="customized-timeline" content={customizedContent}/>
             </section>
 
             <section id="skills-section">

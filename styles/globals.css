@@ -1,29 +1,84 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat");
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat.ttf") format("truetype");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Linotte";
+    src: url("../fonts/Linotte-Bold.ttf") format("truetype"),
+         url('../fonts/Linotte-Bold.woff2') format("woff2");
+    font-style: normal;
+}
 
 * {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 #about-section, #skills-section, #projects-section {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    margin-top: 10vh;
-    padding-top: 10vh;
+    margin-top: 6rem;
+    padding-top: 6rem;
     text-align: center;
 }
 
 body {
-    margin: 0 20vw;
+    margin: 0 18vw;
+}
+
+#contact {
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: row;
+    gap: 7rem;
+}
+
+#contact-section {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+#contact-section > .text-container {
+    text-align: center;
+}
+
+.field-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
 }
 
 footer {
-    height:33vh;
+    height: 33vh;
+}
+
+form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 66.6%;
+}
+
+h1 {
+    font-family: "Linotte", sans-serif;
+    font-size: 4.75rem;
+    margin: 0;
 }
 
 h2 {
     align-items: center;
     display: flex;
+    font-family: "Linotte", sans-serif;
+    font-size: 2rem;
     margin: 0;
     text-align: left;
 }
@@ -46,17 +101,43 @@ img {
     max-width: 100%;
 }
 
+input, textarea {
+    width: 100%;
+}
+
+input::placeholder, textarea::placeholder {
+    font-size: 0.9rem;
+}
+
+label {
+    font-weight: bold;
+}
+
+label > span {
+    color: red;
+    padding-left: 0.33rem;
+}
+
 #me-section {
     display: flex;
     flex-direction: column;
+    gap: 7rem;
     height: 100vh;
     justify-content: space-evenly;
+    padding-top: 5rem;
 }
 
 .me-content {
     align-items: center;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.me-content > .text-container {
+    gap: 0.33rem;
+    line-height: normal;
 }
 
 .me-cta {
@@ -64,12 +145,20 @@ img {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    row-gap: 1.25vh;
+    gap: 1rem;
     justify-content: center;
+}
+
+.me-cta > span, .me-cta > i {
+    font-size: 0.9rem;
 }
 
 .no-repository {
     cursor: default;
+}
+
+.p-tabview .p-tabview-panels, .p-tabview .p-tabview-nav, .p-tabview-nav-link {
+    background: rgba(256, 256, 256, 0);
 }
 
 .p-tabview-nav-link {
@@ -84,9 +173,26 @@ img {
     width: 100%;
 }
 
+picture {
+    width: 29%;
+}
+
+.post-title {
+    margin-top: 1.75rem;
+    text-align: end;
+}
+
+.pre-title, .post-title > span {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.pre-title > span {
+    font-size: 2.25rem;
+}
 
 .projects-container {
-    column-gap: calc(((100vw - 2*20vw - 2*1.25rem - 3*31.5% - 6px) / 2) - 6px);
+    column-gap: calc(((100vw - 2*18vw - 2*1.25rem - 3*31.5% - 6px) / 2) - 6px);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -100,6 +206,7 @@ img {
     background: #f3f4f6;
     border: solid 1px #e5e7eb;
     border-radius: 16px;
+    color: #000000;
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
@@ -111,7 +218,7 @@ img {
 
 .project:hover {
     background: #ffffff;
-    border-color: #ffffff;
+    border-color: #3B82F6;
     box-shadow: 0 5px 22px 12px rgba(17, 24, 39, 0.15);
 }
 
@@ -151,6 +258,26 @@ img {
     flex-direction: column;
     justify-content: space-between;
     margin-left: 0.5rem;
+}
+
+.socials-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    width: 33.3%;
+}
+
+.social-item {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    font-size: large;
+    font-weight: bold;
+    gap: 1.25rem;
+}
+
+.social-item > svg {
+    width: 18%;
 }
 
 .technos-container {
