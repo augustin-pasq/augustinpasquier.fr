@@ -4,8 +4,8 @@ import SvgFactory from "@/components/SvgFactory"
 import {TabPanel, TabView} from "primereact/tabview"
 import {Tag} from "primereact/tag"
 import {Timeline} from "primereact/timeline"
+import {TypeAnimation} from "react-type-animation"
 import {useRef} from "react"
-import {TypeAnimation} from "react-type-animation";
 
 const events = [
     { date: "Janvier 2018", text: "Stage de découverte de troisième dans une boutique de support informatique" },
@@ -41,6 +41,12 @@ const projects = {
     personals: {
         tabTitle: "Projets personnels",
         content: [
+            {
+                name: "Alarm",
+                technos: ["Siri Shortcuts", "Express.js"],
+                description: "Récupération du temps restant avant la prochaine alarme sur iPhone",
+                repositoryName: "Alarm"
+            },
             {
                 name: "LJDP (wip)",
                 technos: ["React.js", "Next.js", "Prisma", "MySQL"],
@@ -187,7 +193,7 @@ export default function Home() {
                             <TypeAnimation
                                 sequence={[
                                     "étudiant en BUT informatique", 1500,
-                                    "alternant développeur web", 1500,
+                                    "développeur web en alternance", 1500,
                                     "passionné d'informatique", 1500,
                                 ]}
                                 preRenderFirstString={true}

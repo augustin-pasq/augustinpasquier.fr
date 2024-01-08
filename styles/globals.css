@@ -15,6 +15,11 @@
     font-family: "Montserrat", sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color: unset;
+}
+
 #about-section, #skills-section, #projects-section {
     display: flex;
     flex-direction: column;
@@ -30,23 +35,36 @@ body {
 
 #contact {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    gap: 7rem;
+}
+
+.contact-title {
+    text-align: center;
 }
 
 .contact-container {
     display: flex;
     flex-direction: row;
-    gap: 7rem;
+    justify-content: space-between;
+}
+
+#contact-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 7rem;
+}
+
+#contact-header > .text-container {
+    font-size: 1.1rem;
+    text-align: center;
 }
 
 #contact-section {
     display: flex;
     flex-direction: column;
     gap: 5rem;
-}
-
-#contact-section > .text-container {
-    text-align: center;
 }
 
 .field-container {
@@ -65,7 +83,7 @@ form {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    width: 66.6%;
+    width: 50rem;
 }
 
 h1 {
@@ -174,7 +192,7 @@ label > span {
 }
 
 picture {
-    width: 29%;
+    width: 22rem;
 }
 
 .post-title {
@@ -183,7 +201,6 @@ picture {
 }
 
 .pre-title, .post-title > span {
-    font-size: 1rem;
     font-weight: 500;
 }
 
@@ -264,7 +281,7 @@ picture {
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
-    width: 33.3%;
+    width: fit-content;
 }
 
 .social-item {
@@ -277,7 +294,7 @@ picture {
 }
 
 .social-item > svg {
-    width: 18%;
+    width: 3.5rem;
 }
 
 .technos-container {
