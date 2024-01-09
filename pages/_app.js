@@ -1,5 +1,4 @@
 import "@/styles/globals.css"
-import "primeflex/primeflex.css"
 import "primeicons/primeicons.css"
 import "primereact/resources/themes/lara-light-blue/theme.css"
 

@@ -36,24 +36,18 @@ body {
 #contact {
     display: flex;
     flex-direction: column;
-    gap: 7rem;
+    gap: 14.5rem;
 }
 
 .contact-title {
     text-align: center;
 }
 
-.contact-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
 #contact-header {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    margin-top: 7rem;
+    margin-top: 7.5rem;
 }
 
 #contact-header > .text-container {
@@ -63,27 +57,12 @@ body {
 
 #contact-section {
     display: flex;
-    flex-direction: column;
     gap: 5rem;
-}
-
-.field-container {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    width: 100%;
+    justify-content: space-evenly;
 }
 
 footer {
     height: 33vh;
-}
-
-form {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    width: 50rem;
 }
 
 h1 {
@@ -148,7 +127,6 @@ label > span {
 .me-content {
     align-items: center;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
 }
@@ -211,7 +189,6 @@ picture {
 .projects-container {
     column-gap: calc(((100vw - 2*18vw - 2*1.25rem - 3*31.5% - 6px) / 2) - 6px);
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 1rem;
@@ -249,7 +226,6 @@ picture {
 
 .project-technos {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     gap: 0.5rem;
     justify-content: center;
@@ -257,7 +233,6 @@ picture {
 
 .skill {
     display: flex;
-    flex-direction: row;
     font-weight: bold;
     gap: 1rem;
     justify-content: center;
@@ -277,29 +252,22 @@ picture {
     margin-left: 0.5rem;
 }
 
-.socials-container {
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
-    width: fit-content;
-}
-
 .social-item {
     align-items: center;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     font-size: large;
     font-weight: bold;
-    gap: 1.25rem;
+    gap: 1.5rem;
 }
 
 .social-item > svg {
-    width: 3.5rem;
+    height: 5.75rem;
+    max-width: 5.75rem;
 }
 
 .technos-container {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     row-gap: 3rem;
 }
