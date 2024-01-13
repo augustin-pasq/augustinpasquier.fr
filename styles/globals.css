@@ -20,7 +20,7 @@ a {
     color: unset;
 }
 
-#about-section, #skills-section, #projects-section {
+#about-section, #contact-section, #projects-section, #skills-section {
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -33,29 +33,24 @@ body {
     margin: 0 18vw;
 }
 
-#contact {
-    display: flex;
-    flex-direction: column;
-    gap: 14.5rem;
-}
-
-.contact-title {
-    text-align: center;
-}
-
-#contact-header {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    margin-top: 7.5rem;
-}
-
-#contact-header > .text-container {
-    font-size: 1.1rem;
-    text-align: center;
-}
-
 #contact-section {
+    margin: 9rem 0 12rem 0;
+    padding: 9rem 0 12rem 0;
+    gap: 1.5rem;
+}
+
+#contact-section > h2 {
+    font-size: 3.25rem;
+    justify-content: center;
+}
+
+#contact-section > .text-container {
+    font-size: 1.1rem;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.channels {
     display: flex;
     gap: 5rem;
     justify-content: space-evenly;
@@ -262,8 +257,8 @@ picture {
 }
 
 .social-item > svg {
-    height: 5.75rem;
-    max-width: 5.75rem;
+    height: 5rem;
+    max-width: 5rem;
 }
 
 .technos-container {

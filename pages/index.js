@@ -1,4 +1,5 @@
 import Head from "next/head"
+import Link from "next/link"
 import {Rating} from "primereact/rating"
 import SvgFactory from "@/components/SvgFactory"
 import {TabPanel, TabView} from "primereact/tabview"
@@ -269,7 +270,8 @@ export default function Home() {
 
                 <div className="text-container">
                     <p>
-                        Que ce soit sur mon temps personnel, à l'université ou en entreprise, j'ai développé multiples applications et
+                        Que ce soit sur mon temps personnel, à l'université ou en entreprise, j'ai développé multiples
+                        applications et
                         petits programmes. Chacun m'a permis d'apprendre ou de m'améliorer dans une technologie.
                     </p>
                     <span>Le code de chacun de ces projets est disponible sur GitHub.</span>
@@ -282,7 +284,8 @@ export default function Home() {
                                 <div className="projects-container">
                                     {projects[category].content.map((project, projectIndex) => {
                                         return (
-                                            <div key={projectIndex} className={project.repositoryName ? "project cursor-pointer" : "project no-repository"} onClick={() => project.repositoryName ? window.open(`https://github.com/augustin-pasq/${project.repositoryName}`) : ""}>
+                                            <Link key={projectIndex}
+                                                 className={project.repositoryName ? "project cursor-pointer" : "project no-repository"} href={project.repositoryName ? `https://github.com/augustin-pasq/${project.repositoryName}` : ""} target="_blank">
                                                 <span className="project-name">{project.name}</span>
                                                 <div className="project-technos">
                                                     {project.technos.map((techno, technoIndex) => (
@@ -290,7 +293,7 @@ export default function Home() {
                                                     ))}
                                                 </div>
                                                 <span className="project-description">{project.description}</span>
-                                            </div>
+                                            </Link>
                                         )
                                     })}
                                 </div>
@@ -299,10 +302,32 @@ export default function Home() {
                     })}
                 </TabView>
             </section>
+
+            <section id="contact-section">
+                <h2>Besoin de me contacter ?</h2>
+                <div className="text-container">
+                    <p>
+                        Vous pouvez m'envoyer un mail et me retrouver sur GitHub et LinkedIn.
+                    </p>
+                </div>
+
+                <div className="channels">
+                    <Link className="social-item" href="mailto:contact@augustinpasquier.fr" target="_blank">
+                        <SvgFactory item="mail"/>
+                        <span>Mail</span>
+                    </Link>
+
+                    <Link className="social-item" href="https://www.github.com/augustin-pasq" target="_blank">
+                        <SvgFactory item="github"/>
+                        <span>GitHub</span>
+                    </Link>
+
+                    <Link className="social-item" href="https://www.linkedin.com/in/augustin-pasquier-354a07228/" target="_blank">
+                        <SvgFactory item="linkedin"/>
+                        <span>LinkedIn</span>
+                    </Link>
+                </div>
+            </section>
         </main>
-
-        <footer>
-
-        </footer>
     </>)
 }
