@@ -307,7 +307,7 @@ export default function Home() {
                 <h2>Besoin de me contacter ?</h2>
                 <div className="text-container">
                     <p>
-                        Vous pouvez m'envoyer un mail et me retrouver sur GitHub et LinkedIn.
+                        Vous pouvez m'envoyer un mail ainsi que me retrouver sur GitHub et LinkedIn.
                     </p>
                 </div>
 
