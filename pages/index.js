@@ -1,3 +1,5 @@
+import {Button} from "primereact/button"
+import {Carousel} from "primereact/carousel"
 import {CSSTransition} from "react-transition-group"
 import Head from "next/head"
 import Link from "next/link"
@@ -6,7 +8,6 @@ import SvgFactory from "@/components/SvgFactory"
 import {TabPanel, TabView} from "primereact/tabview"
 import {Tag} from "primereact/tag"
 import {Timeline} from "primereact/timeline"
-import {TypeAnimation} from "react-type-animation"
 import {useEffect, useRef, useState} from "react"
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
     const [readyToRender, setReadyToRender] = useState(false)
 
     const [displaySidebar, setDisplaySidebar] = useState(false)
+    const header = useRef(null)
     const about = useRef(null)
     const languages = useRef(null)
     const projects = useRef(null)
@@ -27,9 +29,26 @@ export default function Home() {
             })
 
         window.addEventListener("scroll", () => {
-            setDisplaySidebar(window.scrollY > window.innerHeight / 1.75)
+            setDisplaySidebar(window.scrollY > window.innerHeight / 1.5)
         })
     }, [])
+
+    const navigationButtons = (id) => {
+        return (
+            <div id={id} className="navigation-buttons">
+                <div className="navigation-button" onClick={() => about.current.scrollIntoView()}>💡</div>
+                <div className="navigation-button" onClick={() => languages.current.scrollIntoView()}>🔧</div>
+                <div className="navigation-button" onClick={() => projects.current.scrollIntoView()}>🏗️</div>
+                <div className="navigation-button" onClick={() => contact.current.scrollIntoView()}>💬</div>
+            </div>
+        )
+    }
+
+    const productTemplate = (item) => {
+        return (
+            <span>{item}</span>
+        )
+    }
 
     const timelineItem = (item) => {
         return (
@@ -51,47 +70,47 @@ export default function Home() {
                         <link rel="icon" href="/favicon.ico"/>
                     </Head>
 
-                    <CSSTransition in={displaySidebar} timeout={500} classNames="slide" unmountOnExit>
-                            <div id="sidebar">
-                                <div className="sidebar-item" onClick={() => about.current.scrollIntoView()}>💡</div>
-                                <div className="sidebar-item" onClick={() => languages.current.scrollIntoView()}>🔧</div>
-                                <div className="sidebar-item" onClick={() => projects.current.scrollIntoView()}>🏗️</div>
-                                <div className="sidebar-item" onClick={() => contact.current.scrollIntoView()}>💬</div>
-                            </div>
+                    <CSSTransition in={displaySidebar} timeout={500} classNames="slide-left" unmountOnExit>
+                        {navigationButtons("sidebar")}
                     </CSSTransition>
 
-                    <main>
-                        <section id="me-section">
-                            <div className="me-content">
-                                <div className="text-container">
-                                    <span className="pre-title"><span>👋</span>, moi c'est</span>
+                    <header ref={header}>
+                        <div id="header-content">
+                            <div id="header-wrapper">
+                                <div>
+                                    <span id="intro"><span id="header-emoji">👋</span>, moi c'est</span>
                                     <h1>Augustin Pasquier</h1>
-                                    <span className="post-title">et je suis 
-                                            <TypeAnimation
-                                                sequence={["étudiant en BUT informatique", 1500, "développeur web en alternance", 1500, "passionné d'informatique", 1500,]}
-                                                preRenderFirstString={true}
-                                                speed={50}
-                                                repeat={Infinity}/>
-                                        </span>
+                                    <span id="carousel">et je suis 
+                                            <Carousel
+                                                value={["étudiant en BUT informatique", "développeur web en alternance", "passionné par la programmation"]}
+                                                numVisible={1} numScroll={1} orientation="vertical" circular
+                                                autoplayInterval={2000} showIndicators={false} showNavigators={false}
+                                                verticalViewPortHeight={"1.5rem"} itemTemplate={productTemplate}/>
+                                    </span>
                                 </div>
 
-                                <picture>
-                                    <source srcSet="/images/profile_picture_no-background.webp"/>
-                                    <img src="/images/profile_picture_no-background.png" alt="Photo de profil"/>
-                                </picture>
+                                {navigationButtons("header-navigation")}
                             </div>
+                        </div>
 
-                            <div className="me-cta">
-                                <span>Apprenez-en plus sur moi !</span>
-                                <i className="pi pi-chevron-down cta-chevron" onClick={() => about.current.scrollIntoView()}></i>
-                            </div>
-                        </section>
+                        <picture>
+                            <source srcSet="/images/profile_picture.webp"/>
+                            <img src="/images/profile_picture.png" alt="Photo de profil"/>
+                        </picture>
 
+                        <i className="pi pi-angle-double-down"
+                           onClick={() => about.current.scrollIntoView()}></i>
+                    </header>
+
+                    <main>
                         <section id="about-section" ref={about}>
                             <h2><span>💡</span>Tout commence avec un ruban LED...</h2>
 
                             <div className="text-container">
-                                <p>En classe de troisième, je me vois mener un projet scolaire dont l'un des objectifs était de contrôler un ruban LED via une carte Arduino. Ce projet, c'est ma première confrontation à la programmation. C'est aussi le déclic qui me fera prendre conscience que c'est dans cette discipline que je veux m'illustrer.</p>
+                                <p>En classe de troisième, je me vois mener un projet scolaire dont l'un des objectifs
+                                    était de contrôler un ruban LED via une carte Arduino. Ce projet, c'est ma première
+                                    confrontation à la programmation. C'est aussi le déclic qui me fera prendre
+                                    conscience que c'est dans cette discipline que je veux m'illustrer.</p>
                                 <span>Depuis, j'enchaîne les projets et m'investis à fond dans ma passion :</span>
                             </div>
 
@@ -102,7 +121,9 @@ export default function Home() {
                             <h2><span>🔧</span>Des langages et des outils</h2>
 
                             <div className="text-container">
-                                <p>Depuis ma première ligne de code jusqu'à aujourd'hui, j'ai appris à me servir de tout un tas de langages et outils. À l'aise avec certaines, envieux de progresser dans d'autres, j'ai déjà utilisé toutes ces technologies.</p>
+                                <p>Depuis ma première ligne de code jusqu'à aujourd'hui, j'ai appris à me servir de tout
+                                    un tas de langages et outils. À l'aise avec certaines, envieux de progresser dans
+                                    d'autres, j'ai déjà utilisé toutes ces technologies.</p>
                             </div>
 
                             <div className="languages-container">
@@ -135,7 +156,9 @@ export default function Home() {
                             <h2><span>🏗️</span>Mes projets</h2>
 
                             <div className="text-container">
-                                <p>Que ce soit sur mon temps personnel, à l'université ou en entreprise, j'ai développé multiples applications et petits programmes. Chaque projet m'a permis d'apprendre ou de m'améliorer dans une technologie.</p>
+                                <p>Que ce soit sur mon temps personnel, à l'université ou en entreprise, j'ai développé
+                                    multiples applications et petits programmes. Chaque projet m'a permis d'apprendre ou
+                                    de m'améliorer dans une technologie.</p>
                                 <span>Le code de chacun d'entre eux est disponible sur GitHub.</span>
                             </div>
 
@@ -146,14 +169,18 @@ export default function Home() {
                                             <div className="projects-container">
                                                 {data.projects[category].content.map((project, projectIndex) => {
                                                     return (
-                                                        <div key={projectIndex} className={project.repositoryName ? "project cursor-pointer" : "project no-repository"} onClick={() => project.repositoryName ? window.open(`https://github.com/augustin-pasq/${project.repositoryName}`) : ""}>
+                                                        <div key={projectIndex}
+                                                             className={project.repositoryName ? "project cursor-pointer" : "project no-repository"}
+                                                             onClick={() => project.repositoryName ? window.open(`https://github.com/augustin-pasq/${project.repositoryName}`) : ""}>
                                                             <span className="project-name">{project.name}</span>
                                                             <div className="project-technos">
                                                                 {project.technos.map((techno, technoIndex) => (
-                                                                    <Tag key={technoIndex} value={`${techno}`} rounded></Tag>
+                                                                    <Tag key={technoIndex} value={`${techno}`}
+                                                                         rounded></Tag>
                                                                 ))}
                                                             </div>
-                                                            <span className="project-description">{project.description}</span>
+                                                            <span
+                                                                className="project-description">{project.description}</span>
                                                         </div>
                                                     )
                                                 })}
@@ -188,6 +215,10 @@ export default function Home() {
                             </div>
                         </section>
                     </main>
+
+                    <CSSTransition in={displaySidebar} timeout={500} classNames="slide-right" unmountOnExit>
+                        <Button id="scroll-to-top-button" icon="pi pi-arrow-up" rounded text raised onClick={() => header.current.scrollIntoView()}/>
+                    </CSSTransition>
                 </>
             }
         </>
