@@ -66,7 +66,7 @@ section {
 .text-container {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 0.5rem;
     line-height: 1.75rem;
 }
 
@@ -233,6 +233,10 @@ picture {
 
 /******************** ABOUT SECTION ********************/
 
+.p-timeline {
+    margin-top: 1rem;
+}
+
 .p-timeline-event {
     min-height: 7.5rem;
 }
@@ -311,6 +315,10 @@ picture {
 
 .no-repository {
     cursor: default;
+}
+
+.p-tabview {
+    margin-top: 1rem;
 }
 
 .p-tabview .p-tabview-panels, .p-tabview .p-tabview-nav, .p-tabview-nav-link {
