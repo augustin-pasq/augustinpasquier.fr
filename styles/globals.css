@@ -103,6 +103,7 @@ section {
 }
 
 #scroll-to-top-button {
+    background: #ffffff;
     bottom: 2rem;
     position: fixed;
     right: 2rem;
