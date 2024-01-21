@@ -76,21 +76,19 @@ export default function Home() {
 
                     <header ref={header}>
                         <div id="header-content">
-                            <div id="header-wrapper">
-                                <div>
-                                    <span id="intro"><span id="header-emoji">👋</span>, moi c'est</span>
-                                    <h1>Augustin Pasquier</h1>
-                                    <span id="carousel">et je suis 
-                                            <Carousel
-                                                value={["étudiant en BUT informatique", "développeur web en alternance", "passionné par la programmation"]}
-                                                numVisible={1} numScroll={1} orientation="vertical" circular
-                                                autoplayInterval={2000} showIndicators={false} showNavigators={false}
-                                                verticalViewPortHeight={"1.5rem"} itemTemplate={productTemplate}/>
-                                    </span>
-                                </div>
-
-                                {navigationButtons("header-navigation")}
+                            <div>
+                                <span id="intro"><span id="header-emoji">👋</span>, moi c'est</span>
+                                <h1>Augustin Pasquier</h1>
+                                <span id="carousel">et je suis 
+                                        <Carousel
+                                            value={["étudiant en BUT informatique", "développeur web en alternance", "passionné par la programmation"]}
+                                            numVisible={1} numScroll={1} orientation="vertical" circular
+                                            autoplayInterval={2000} showIndicators={false} showNavigators={false}
+                                            verticalViewPortHeight={"1.5rem"} itemTemplate={productTemplate}/>
+                                </span>
                             </div>
+
+                            {navigationButtons("header-navigation")}
                         </div>
 
                         <picture>
@@ -98,8 +96,10 @@ export default function Home() {
                             <img src="/images/profile_picture.png" alt="Photo de profil"/>
                         </picture>
 
-                        <i className="pi pi-angle-double-down"
-                           onClick={() => about.current.scrollIntoView()}></i>
+                        <div id="cta-container">
+                            <i className="pi pi-angle-double-down"
+                               onClick={() => about.current.scrollIntoView()}></i>
+                        </div>
                     </header>
 
                     <main>

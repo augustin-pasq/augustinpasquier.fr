@@ -170,6 +170,13 @@ section {
     justify-content: flex-end;
 }
 
+#cta-container {
+    bottom: 8.5vh;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+
 h1 {
     font-family: "Linotte", sans-serif;
     font-size: 5.5rem;
@@ -179,6 +186,8 @@ h1 {
 header {
     display: flex;
     font-size: 1.25rem;
+    gap: 14vw;
+    justify-content: center;
     width: 100%;
 }
 
@@ -187,26 +196,16 @@ header {
 }
 
 #header-content {
-    align-items: flex-end;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: 11rem;
-    width: 50%;
-}
-
-#header-wrapper {
+    bottom: 11vh;
     display: flex;
     flex-direction: column;
     gap: 9rem;
+    justify-content: center;
+    position: relative;
 }
 
 i {
-    display: flex !important;
-    justify-content: center;
-    position: absolute;
-    bottom: 8.5vh;
-    width: 100%;
+    padding: 0.5rem;
 }
 
 img {
@@ -227,7 +226,6 @@ picture {
     display: flex;
     height: 100vh;
     justify-content: center;
-    width: 50%;
 }
 
 
@@ -407,8 +405,8 @@ picture {
 
 #socials-container {
     display: flex;
-    gap: 5rem;
-    justify-content: space-evenly;
+    gap: 18rem;
+    justify-content: center;
 }
 
 .social-item {
