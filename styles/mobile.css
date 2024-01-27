@@ -1,0 +1,104 @@
+@media screen and (max-width: 1280px) {
+
+
+    /******************** COMMON ********************/
+
+    h2 {
+        font-size: 1.75rem;
+        padding: 0 1rem;
+    }
+
+    h2 > span {
+        font-size: 1.75rem;
+    }
+
+    main {
+        padding: 0 1rem;
+    }
+
+    section {
+        gap: 1rem;
+        margin: 3rem 0;
+        padding-top: 3rem;
+    }
+
+    .text-container {
+        padding: 0 2rem;
+    }
+
+
+
+    /******************** HEADER ********************/
+
+    #carousel {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    #cta-container {
+        display: none;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1.25rem;
+    }
+
+    header {
+        flex-direction: column-reverse;
+        font-size: 1.05rem;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    #header-emoji {
+        font-size: 2rem;
+    }
+
+    #header-content {
+        gap: 3rem;
+        position: static;
+    }
+
+    img {
+        width: 11rem;
+    }
+
+    .p-carousel-item > span {
+        font-size: 1.05rem;
+    }
+
+    /******************** LANGUAGES SECTION ********************/
+
+    .languages-container {
+        gap: 5rem;
+        margin-top: 2rem;
+    }
+
+    .tools-container {
+        gap: 3rem;
+        margin: 5rem 0;
+    }
+
+
+
+    /******************** CONTACT SECTION ********************/
+
+    #contact-section {
+        margin: 4rem 0 2rem 0;
+        padding: 4rem 1rem;
+    }
+
+    #contact-section > .text-container {
+        margin-bottom: 2rem;
+    }
+
+    .social-item > svg {
+        height: 4.5rem;
+        max-width: 4.5rem;
+    }
+
+    #socials-container {
+        gap: 4rem 6rem;
+    }
+}

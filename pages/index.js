@@ -33,17 +33,6 @@ export default function Home() {
         })
     }, [])
 
-    const navigationButtons = (id) => {
-        return (
-            <div id={id} className="navigation-buttons">
-                <div className="navigation-button" onClick={() => about.current.scrollIntoView()}>💡</div>
-                <div className="navigation-button" onClick={() => languages.current.scrollIntoView()}>🔧</div>
-                <div className="navigation-button" onClick={() => projects.current.scrollIntoView()}>🏗️</div>
-                <div className="navigation-button" onClick={() => contact.current.scrollIntoView()}>💬</div>
-            </div>
-        )
-    }
-
     const productTemplate = (item) => {
         return (
             <span>{item}</span>
@@ -64,14 +53,18 @@ export default function Home() {
             {readyToRender &&
                 <>
                     <Head>
-                        <title>Augustin Pasquier</title>
-                        <meta name="description" content="Augustin Pasquier - Site web"/>
+                        <title>Augustin Pasquier | Portfolio</title>
+                        <meta name="description" content="Augustin Pasquier | Portfolio"/>
                         <meta name="viewport" content="width=device-width, initial-scale=1"/>
                         <link rel="icon" href="/favicon.ico"/>
                     </Head>
 
                     <CSSTransition in={displaySidebar} timeout={500} classNames="slide-left" unmountOnExit>
-                        {navigationButtons("sidebar")}
+                        <div id="sidebar" className="navigation-buttons">
+                            <div className="navigation-button" onClick={() => about.current.scrollIntoView()}>💡</div>
+                            <div className="navigation-button" onClick={() => languages.current.scrollIntoView()}>🔧</div>
+                            <div className="navigation-button" onClick={() => projects.current.scrollIntoView()}>🏗️</div>
+                        </div>
                     </CSSTransition>
 
                     <header ref={header}>
@@ -83,12 +76,12 @@ export default function Home() {
                                         <Carousel
                                             value={["étudiant en BUT informatique", "développeur web en alternance", "passionné par la programmation"]}
                                             numVisible={1} numScroll={1} orientation="vertical" circular
-                                            autoplayInterval={2000} showIndicators={false} showNavigators={false}
-                                            verticalViewPortHeight={"1.5rem"} itemTemplate={productTemplate}/>
+                                            autoplayInterval={1800} showIndicators={false} showNavigators={false}
+                                            verticalViewPortHeight={"2rem"} itemTemplate={productTemplate}/>
                                 </span>
                             </div>
 
-                            {navigationButtons("header-navigation")}
+                            <Button id="contact-button" label="Me contacter" icon="pi pi-send" text raised rounded onClick={() => contact.current.scrollIntoView()} />
                         </div>
 
                         <picture>
@@ -104,7 +97,7 @@ export default function Home() {
 
                     <main>
                         <section id="about-section" ref={about}>
-                            <h2><span>💡</span>Tout commence avec un ruban LED...</h2>
+                            <h2><span>💡</span>Tout commence avec un ruban LED</h2>
 
                             <div className="text-container">
                                 <p>En classe de troisième, je me vois mener un projet scolaire dont l'un des objectifs
@@ -130,8 +123,10 @@ export default function Home() {
                                 {data.languages.map((language, languageIndex) => {
                                     return (
                                         <div key={languageIndex} className="language-item">
-                                            <SvgFactory item={language.logo}/>
-                                            <div>
+                                            <div className="icon-container">
+                                                <SvgFactory item={language.logo}/>
+                                            </div>
+                                            <div className="rating-container">
                                                 <span>{language.name}</span>
                                                 <Rating value={language.value} cancel={false} readOnly/>
                                             </div>
@@ -143,7 +138,7 @@ export default function Home() {
                             <div className="tools-container">
                                 {data.tools.map((tool, index) => {
                                     return (
-                                        <div key={index} className="tool">
+                                        <div key={index} className="tool-item">
                                             <SvgFactory item={tool.logo}/>
                                             <span>{tool.name}</span>
                                         </div>
