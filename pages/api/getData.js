@@ -39,12 +39,12 @@ export default async function handle(req, res) {
                     description: "Récupération du temps restant avant la prochaine alarme sur iPhone",
                     repositoryName: "Alarm"
                 },
-                {
+                /*{
                     name: "LJDP (wip)",
                     technos: ["React.js", "Next.js", "Prisma", "MySQL"],
                     description: "Jeu multijoueur en ligne de devinettes à base de photos",
-                    repositoryName: null
-                },
+                    repositoryName: "LJDP"
+                },*/
                 {
                     name: "augustinpasquier.fr",
                     technos: ["React.js", "Next.js"],

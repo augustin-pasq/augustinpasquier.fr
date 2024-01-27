@@ -1,15 +1,10 @@
 @media screen and (max-width: 1280px) {
 
-
     /******************** COMMON ********************/
 
     h2 {
         font-size: 1.75rem;
         padding: 0 1rem;
-    }
-
-    h2 > span {
-        font-size: 1.75rem;
     }
 
     main {
@@ -22,8 +17,12 @@
         padding-top: 3rem;
     }
 
-    .text-container {
+    .section-text {
         padding: 0 2rem;
+    }
+
+    .section-title-emoji {
+        font-size: 1.75rem;
     }
 
 
@@ -35,7 +34,7 @@
         gap: 0.5rem;
     }
 
-    #cta-container {
+    #cta {
         display: none;
     }
 
@@ -51,11 +50,7 @@
         text-align: center;
     }
 
-    #header-emoji {
-        font-size: 2rem;
-    }
-
-    #header-content {
+    #header-text {
         gap: 3rem;
         position: static;
     }
@@ -64,18 +59,24 @@
         width: 11rem;
     }
 
-    .p-carousel-item > span {
+    .carousel-item {
         font-size: 1.05rem;
     }
 
+    #title-heading-emoji {
+        font-size: 2rem;
+    }
+
+
+
     /******************** LANGUAGES SECTION ********************/
 
-    .languages-container {
+    .languages {
         gap: 5rem;
         margin-top: 2rem;
     }
 
-    .tools-container {
+    .tools {
         gap: 3rem;
         margin: 5rem 0;
     }
@@ -89,16 +90,16 @@
         padding: 4rem 1rem;
     }
 
-    #contact-section > .text-container {
+    #contact-section-text {
         margin-bottom: 2rem;
     }
 
-    .social-item > svg {
-        height: 4.5rem;
-        max-width: 4.5rem;
+    #socials {
+        gap: 4rem 6rem;
     }
 
-    #socials-container {
-        gap: 4rem 6rem;
+    .socials-item-icon {
+        height: 4.5rem;
+        max-width: 4.5rem;
     }
 }
