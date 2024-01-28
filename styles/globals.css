@@ -186,12 +186,14 @@ section {
 }
 
 .sidebar-item {
+    aspect-ratio: 1 / 1;
     background: #ffffff;
     border-radius: 100%;
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.08), 0 3px 4px rgba(0, 0, 0, 0.1), 0 1px 4px -1px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     font-size: 1.4rem;
     padding: 0.9rem;
+    text-align: center;
     transition: 0.2s;
     user-select: none;
 }
