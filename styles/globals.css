@@ -519,6 +519,7 @@ picture {
 }
 
 .socials-item {
+    align-items: center;
     animation: scale-down 0.2s cubic-bezier(0.860, 0.000, 0.070, 1.000) both;
     display: flex;
     flex-direction: column;
