@@ -13,6 +13,7 @@ import {useEffect, useRef, useState} from "react"
 export default function Home() {
     const [data, setData] = useState({})
     const [readyToRender, setReadyToRender] = useState(false)
+    const [movingHand, setMovingHand] = useState(true)
 
     const [displaySidebar, setDisplaySidebar] = useState(false)
     const header = useRef(null)
@@ -70,7 +71,7 @@ export default function Home() {
                     <header ref={header}>
                         <div id="header-text">
                             <div>
-                                <span id="title-heading"><span id="title-heading-emoji">👋</span>, moi c'est</span>
+                                <span id="title-heading"><span id="title-heading-emoji" className={movingHand && "title-heading-emoji-animated"} onAnimationEnd={() => setMovingHand(false)}>👋</span>, moi c'est</span>
                                 <h1>Augustin Pasquier</h1>
                                 <span id="carousel">et je suis 
                                     <Carousel value={["étudiant en BUT informatique", "développeur web en alternance", "passionné par la programmation"]} numVisible={1} numScroll={1} orientation="vertical" circular autoplayInterval={1800} showIndicators={false} showNavigators={false} verticalViewPortHeight={"2rem"} itemTemplate={carouselItem}/>

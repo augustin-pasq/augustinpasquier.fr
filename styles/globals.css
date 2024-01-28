@@ -15,6 +15,88 @@
 
 
 
+/******************** KEYFRAMES ********************/
+
+@keyframes incline {
+    0%,
+    100% {
+        transform: rotate(0);
+        transform-origin: bottom;
+    }
+    50% {
+        transform: rotate(-4deg);
+        transform-origin: bottom;
+    }
+}
+
+@keyframes moving-hand {
+    0%,
+    100% {
+        transform: rotate(0deg);
+        transform-origin: 100% 100%;
+    }
+    10% {
+        transform: rotate(3deg);
+    }
+    20%,
+    40%,
+    60% {
+        transform: rotate(-6deg);
+    }
+    30%,
+    50%,
+    70% {
+        transform: rotate(6deg);
+    }
+    80% {
+        transform: rotate(-3deg);
+    }
+    90% {
+        transform: rotate(3deg);
+    }
+}
+
+@keyframes scale-down {
+    0% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes scale-up {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.5);
+    }
+}
+
+
+@keyframes up-down {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateY(-0.75vh);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateY(0.75vh);
+    }
+}
+
+
+
 /******************** COMMON ********************/
 
 * {
@@ -31,12 +113,11 @@ body {
 }
 
 h2 {
-    align-items: center;
+    align-items: baseline;
     display: flex;
     font-family: "Linotte", sans-serif;
     font-size: 2rem;
     margin: 0;
-    text-align: left;
 }
 
 html {
@@ -45,7 +126,6 @@ html {
 
 main {
     padding: 0 19rem;
-    z-index: 0;
 }
 
 .p-button {
@@ -114,7 +194,6 @@ section {
     padding: 0.9rem;
     transition: 0.2s;
     user-select: none;
-    z-index: 1;
 }
 
 .sidebar-item:hover {
@@ -187,9 +266,8 @@ section {
 }
 
 #cta {
-    bottom: 8.5vh;
+    bottom: 9.5vh;
     display: flex;
-    justify-content: center;
     position: absolute;
 }
 
@@ -218,25 +296,40 @@ header {
 }
 
 i {
+    animation: up-down 10s ease-in-out infinite both;
     padding: 0.5rem;
+}
+
+i:hover {
+    cursor: pointer;
 }
 
 img {
     width: 22.5rem;
 }
 
-#title-heading {
-    text-align: left;
+img:hover {
+    animation: incline 0.4s cubic-bezier(0.445, 0.050, 0.550, 0.950) both;
 }
 
 #title-heading-emoji {
+    cursor: default;
+    display: inline-block;
     font-size: 2.25rem;
+    user-select: none;
+}
+
+#title-heading-emoji:hover {
+    animation: moving-hand 0.8s ease-in-out both;
+}
+
+.title-heading-emoji-animated {
+    animation: moving-hand 0.8s ease-in-out 0.25s both;
 }
 
 picture {
     align-items: center;
     display: flex;
-    justify-content: center
 }
 
 
@@ -278,7 +371,6 @@ picture {
     display: flex;
     flex-wrap: wrap;
     gap: 4rem;
-    justify-content: center;
     margin: 2rem 0;
 }
 
@@ -334,6 +426,7 @@ picture {
 
 .p-tabview {
     margin-top: 2rem;
+    z-index: 0;
 }
 
 .p-tabview .p-tabview-panels, .p-tabview .p-tabview-nav, .p-tabview-nav-link {
@@ -362,7 +455,6 @@ picture {
 }
 
 .projects-item {
-    align-items: center;
     background: #f3f4f6;
     border: solid 1px #e5e7eb;
     border-radius: 16px;
@@ -372,7 +464,6 @@ picture {
     flex: 0 0 31%;
     flex-direction: column;
     gap: 1.25rem;
-    justify-content: center;
     padding: 1.8rem;
     transition: 0.3s;
     min-width: 20rem;
@@ -418,23 +509,26 @@ picture {
 #contact-section-text {
     font-size: 1.1rem;
     margin-bottom: 5rem;
-    text-align: center;
 }
 
 #socials {
     display: flex;
     flex-wrap: wrap;
-    gap: 15rem;
+    gap: 5rem 15rem;
     justify-content: center;
 }
 
 .socials-item {
-    align-items: center;
+    animation: scale-down 0.2s cubic-bezier(0.860, 0.000, 0.070, 1.000) both;
     display: flex;
     flex-direction: column;
     font-size: 1.1rem;
     font-weight: bold;
     gap: 1.5rem;
+}
+
+.socials-item:hover {
+    animation: scale-up 0.2s cubic-bezier(0.860, 0.000, 0.070, 1.000) both;
 }
 
 .socials-item-icon {
