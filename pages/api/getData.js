@@ -7,7 +7,7 @@ export default async function handle(req, res) {
         { date: "Juin 2021", text: "Obtention du baccalauréat mention bien, spécialités mathématiques et physique chimie" },
         { date: "Septembre 2021", text: "Intégration du BUT informatique à l'IUT de Vannes" },
         { date: "Septembre 2022", text: "Début d'un contrat d'alternance pour du développement web dans la start-up vannetaise Imagina" },
-        { date: "Décembre 2023", text: "Participation à l'édition 2023 de l'évènement \"La Nuit de l'Info\"" }
+        { date: "Décembre 2023", text: "Participation à l'édition 2023 de l'évènement \"La Nuit de l'Info\", classé 2ème sur 61 équipes" }
     ]
 
     const languages = [
