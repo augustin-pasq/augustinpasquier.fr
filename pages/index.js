@@ -9,6 +9,8 @@ import {TabPanel, TabView} from "primereact/tabview"
 import {Tag} from "primereact/tag"
 import {Timeline} from "primereact/timeline"
 import {useEffect, useRef, useState} from "react"
+import {SpeedDial} from "primereact/speeddial"
+import {useMediaQuery} from "react-responsive"
 
 export default function Home() {
     const [data, setData] = useState({})
@@ -33,6 +35,26 @@ export default function Home() {
             setDisplaySidebar(window.scrollY > window.innerHeight / 1.5)
         })
     }, [])
+
+    const isMobile = useMediaQuery({ minWidth: 1280 })
+
+    const sidebar = [
+        {
+            title: "💡",
+            icon: "about-icon",
+            command: () => about.current.scrollIntoView()
+        },
+        {
+            title: "🔧",
+            icon: "languages-icon",
+            command: () => languages.current.scrollIntoView()
+        },
+        {
+            title: "🏗️",
+            icon: "projects-icon",
+            command: () => projects.current.scrollIntoView()
+        }
+    ]
 
     const carouselItem = (item) => {
         return (
@@ -60,13 +82,17 @@ export default function Home() {
                         <link rel="icon" href="/favicon.ico"/>
                     </Head>
 
-                    <CSSTransition in={displaySidebar} timeout={500} classNames="slide-left" unmountOnExit>
-                        <div id="sidebar">
-                            <div className="sidebar-item" onClick={() => about.current.scrollIntoView()}>💡</div>
-                            <div className="sidebar-item" onClick={() => languages.current.scrollIntoView()}>🔧</div>
-                            <div className="sidebar-item" onClick={() => projects.current.scrollIntoView()}>🏗️</div>
-                        </div>
-                    </CSSTransition>
+                    {isMobile ?
+                        <CSSTransition in={displaySidebar} timeout={500} classNames="slide-left" unmountOnExit>
+                            <div id="sidebar">
+                                {sidebar.map((sidebarItem, index) => {return <div key={index} className="sidebar-item" onClick={sidebarItem.command}>{sidebarItem.title}</div>})}
+                            </div>
+                        </CSSTransition>
+                        :
+                        <CSSTransition in={displaySidebar} timeout={500} classNames="slide-left" unmountOnExit>
+                            <SpeedDial model={sidebar} direction="up" transitionDelay={0} showIcon="pi pi-bars" hideIcon="pi pi-times" buttonClassName="p-button-text" />
+                        </CSSTransition>
+                    }
 
                     <header ref={header}>
                         <div id="header-text">

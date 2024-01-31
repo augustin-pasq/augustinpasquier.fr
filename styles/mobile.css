@@ -29,6 +29,50 @@
 
 
 
+    /******************** NAVIGATION BUTTONS ********************/
+
+    .about-icon:before {
+        content: "💡";
+    }
+
+    .languages-icon:before {
+        content: "🔧";
+    }
+
+    .p-speeddial {
+        bottom: 2rem;
+        left: 2rem;
+        gap: 1.6rem;
+        position: fixed;
+    }
+
+    .p-speeddial-action {
+        height: unset;
+        width: unset;
+    }
+
+    .p-speeddial-button {
+        background: #ffffff;
+        display: flex;
+        height: 3rem;
+        width: 3rem;
+    }
+
+    .p-speeddial-item {
+        margin: 0;
+    }
+
+    .p-speeddial-list {
+        flex-direction: column !important;
+        gap: 1.6rem;
+    }
+
+    .projects-icon:before {
+        content: "🏗️";
+    }
+
+
+
     /******************** HEADER ********************/
 
     #carousel {
