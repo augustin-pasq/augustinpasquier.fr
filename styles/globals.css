@@ -513,14 +513,14 @@ picture {
     margin-bottom: 5rem;
 }
 
-#socials {
+#connections {
     display: flex;
     flex-wrap: wrap;
     gap: 5rem 15rem;
     justify-content: center;
 }
 
-.socials-item {
+.connections-item {
     align-items: center;
     animation: scale-down 0.2s cubic-bezier(0.860, 0.000, 0.070, 1.000) both;
     display: flex;
@@ -530,11 +530,11 @@ picture {
     gap: 1.5rem;
 }
 
-.socials-item:hover {
+.connections-item:hover {
     animation: scale-up 0.2s cubic-bezier(0.860, 0.000, 0.070, 1.000) both;
 }
 
-.socials-item-icon {
+.connections-item-icon {
     height: 5rem;
     max-width: 5rem;
 }

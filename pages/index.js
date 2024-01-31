@@ -210,18 +210,18 @@ export default function Home() {
                                 <p>Vous pouvez m'envoyer un mail ainsi que me retrouver sur GitHub et LinkedIn.</p>
                             </div>
 
-                            <div id="socials">
-                                <Link className="socials-item" href="mailto:contact@augustinpasquier.fr" target="_blank">
+                            <div id="connections">
+                                <Link className="connections-item" href="mailto:contact@augustinpasquier.fr" target="_blank">
                                     <SvgFactory item="mail"/>
                                     <span>Mail</span>
                                 </Link>
 
-                                <Link className="socials-item" href="https://www.github.com/augustin-pasq" target="_blank">
+                                <Link className="connections-item" href="https://www.github.com/augustin-pasq" target="_blank">
                                     <SvgFactory item="github"/>
                                     <span>GitHub</span>
                                 </Link>
 
-                                <Link className="socials-item" href="https://www.linkedin.com/in/augustin-pasquier-354a07228/" target="_blank">
+                                <Link className="connections-item" href="https://www.linkedin.com/in/augustin-pasquier-354a07228/" target="_blank">
                                     <SvgFactory item="linkedin"/>
                                     <span>LinkedIn</span>
                                 </Link>

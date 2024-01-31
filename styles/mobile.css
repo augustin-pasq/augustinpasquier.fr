@@ -144,11 +144,11 @@
         margin-bottom: 2rem;
     }
 
-    #socials {
+    #connections {
         gap: 4rem 6rem;
     }
 
-    .socials-item-icon {
+    .connections-item-icon {
         height: 4.5rem;
         max-width: 4.5rem;
     }
