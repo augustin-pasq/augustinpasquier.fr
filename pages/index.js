@@ -77,17 +77,26 @@ export default function Home() {
                 <>
                     <Head>
                         <title>Augustin Pasquier | Portfolio</title>
-                        <meta name="description" content="Augustin Pasquier | Portfolio"/>
+                        <meta name="description" content="👋, moi c'est Augustin Pasquier, et je suis étudiant en BUT informatique, développeur web en alternance et passionné par la programmation."/>
                         <meta name="viewport" content="width=device-width, initial-scale=1"/>
                         <link rel="icon" href="/favicon.ico"/>
+
+                        <meta property="og:type" content="website"/>
+                        <meta property="og:title" content="Augustin Pasquier | Portfolio"/>
+                        <meta property="og:description" content="👋, moi c'est Augustin Pasquier, et je suis étudiant en BUT informatique, développeur web en alternance et passionné par la programmation."/>
+                        <meta property="og:site_name" content="Augustin Pasquier | Portfolio"/>
+                        <meta property="og:url" content="https://augustinpasquier.fr"/>
+                        <meta property="og:image" content="https://augustinpasquier.fr/images/opengraph_image.png"/>
                     </Head>
 
                     <CSSTransition in={displaySidebar} timeout={500} classNames="slide-left" unmountOnExit>
                         {isMobile ?
                             <div id="sidebar">
-                                {sidebar.map((sidebarItem, index) => {return <div key={index} className="sidebar-item" onClick={sidebarItem.command}>{sidebarItem.title}</div>})}
+                                {sidebar.map((sidebarItem, index) => {
+                                    return <div key={index} className="sidebar-item" onClick={sidebarItem.command}>{sidebarItem.title}</div>
+                                })}
                             </div>
-                        :
+                            :
                             <SpeedDial model={sidebar} direction="up" transitionDelay={0} showIcon="pi pi-bars" hideIcon="pi pi-times" buttonClassName="p-button-text" />
                         }
                     </CSSTransition>
