@@ -16,8 +16,8 @@ export default function Home() {
     const [data, setData] = useState({})
     const [readyToRender, setReadyToRender] = useState(false)
     const [movingHand, setMovingHand] = useState(true)
-
     const [displaySidebar, setDisplaySidebar] = useState(false)
+
     const header = useRef(null)
     const about = useRef(null)
     const languages = useRef(null)
@@ -82,17 +82,19 @@ export default function Home() {
                         <link rel="icon" href="/favicon.ico"/>
                     </Head>
 
-                    {isMobile ?
-                        <CSSTransition in={displaySidebar} timeout={500} classNames="slide-left" unmountOnExit>
+                    <CSSTransition in={displaySidebar} timeout={500} classNames="slide-left" unmountOnExit>
+                        {isMobile ?
                             <div id="sidebar">
                                 {sidebar.map((sidebarItem, index) => {return <div key={index} className="sidebar-item" onClick={sidebarItem.command}>{sidebarItem.title}</div>})}
                             </div>
-                        </CSSTransition>
                         :
-                        <CSSTransition in={displaySidebar} timeout={500} classNames="slide-left" unmountOnExit>
                             <SpeedDial model={sidebar} direction="up" transitionDelay={0} showIcon="pi pi-bars" hideIcon="pi pi-times" buttonClassName="p-button-text" />
-                        </CSSTransition>
-                    }
+                        }
+                    </CSSTransition>
+
+                    <CSSTransition in={displaySidebar} timeout={500} classNames="slide-right" unmountOnExit>
+                        <Button id="scroll-to-top-button" icon="pi pi-arrow-up" rounded text raised onClick={() => header.current.scrollIntoView()}/>
+                    </CSSTransition>
 
                     <header ref={header}>
                         <div id="header-text">
@@ -179,7 +181,7 @@ export default function Home() {
                                 <span>Le code de chacun d'entre eux est disponible sur GitHub.</span>
                             </div>
 
-                            <TabView>
+                                <TabView scrollable>
                                 {Object.keys(data.projects).map((category, index) => {
                                     return (
                                         <TabPanel header={data.projects[category].tabTitle} key={index}>
@@ -228,10 +230,6 @@ export default function Home() {
                             </div>
                         </section>
                     </main>
-
-                    <CSSTransition in={displaySidebar} timeout={500} classNames="slide-right" unmountOnExit>
-                        <Button id="scroll-to-top-button" icon="pi pi-arrow-up" rounded text raised onClick={() => header.current.scrollIntoView()}/>
-                    </CSSTransition>
                 </>
             }
         </>

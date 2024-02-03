@@ -47,6 +47,8 @@
     }
 
     .p-speeddial-action {
+        background: #ffffff;
+        overflow: unset;
         height: unset;
         width: unset;
     }
@@ -63,6 +65,7 @@
     }
 
     .p-speeddial-list {
+        width: 100%;
         flex-direction: column !important;
         gap: 1.6rem;
     }
@@ -132,6 +135,19 @@
     }
 
 
+
+    /******************** PROJECTS SECTION ********************/
+
+    .p-tabview-nav-btn {
+        width: 2rem;
+    }
+    .p-tabview-nav-link {
+        height: 103%;
+    }
+
+    .p-tabview-title {
+        white-space: break-spaces;
+    }
 
     /******************** CONTACT SECTION ********************/
 
