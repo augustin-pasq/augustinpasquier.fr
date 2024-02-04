@@ -18,11 +18,6 @@ Installer les dépendances :
 npm i
 ```
 
-Ajouter fichier .env avec un identifiant Google Analytics :
-```dotenv
-NEXT_PUBLIC_GA4_ID=<identifiant_Google_Analytics>
-```
-
 Lancer le serveur de dev (HMR + React StrictMode, mais plus lent) :
 ```bash
 npm run dev
