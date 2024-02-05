@@ -78,7 +78,7 @@ export default function Home() {
                     <Head>
                         <title>Augustin Pasquier | Portfolio</title>
                         <meta name="description" content="👋, moi c'est Augustin Pasquier, et je suis étudiant en BUT informatique, développeur web en alternance et passionné par la programmation."/>
-                        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+                        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
                         <link rel="icon" href="/favicon.ico"/>
 
                         <meta property="og:type" content="website"/>
@@ -129,7 +129,7 @@ export default function Home() {
                     </header>
 
                     <main>
-                        <section ref={about}>
+                        <section id="about-section" ref={about}>
                             <h2><span className="section-title-emoji">💡</span>Tout commence avec un ruban LED</h2>
 
                             <div className="section-text">
@@ -143,7 +143,7 @@ export default function Home() {
                             <Timeline value={data.events} align="alternate" content={timelineItem}/>
                         </section>
 
-                        <section ref={languages}>
+                        <section id="languages-section" ref={languages}>
                             <h2><span className="section-title-emoji">🔧</span>Des langages et des outils</h2>
 
                             <div className="section-text">
@@ -180,7 +180,7 @@ export default function Home() {
                             </div>
                         </section>
 
-                        <section ref={projects}>
+                        <section id="projects-section" ref={projects}>
                             <h2><span className="section-title-emoji">🏗️</span>Mes projets</h2>
 
                             <div className="section-text">
@@ -190,14 +190,14 @@ export default function Home() {
                                 <span>Le code de chacun d'entre eux est disponible sur GitHub.</span>
                             </div>
 
-                                <TabView scrollable>
+                            <TabView scrollable>
                                 {Object.keys(data.projects).map((category, index) => {
                                     return (
                                         <TabPanel header={data.projects[category].tabTitle} key={index}>
                                             <div className="projects">
                                                 {data.projects[category].content.map((project, projectIndex) => {
                                                     return (
-                                                        <div key={projectIndex} className="projects-item" onClick={() => project.repositoryName ? window.open(`https://github.com/augustin-pasq/${project.repositoryName}`) : ""}>
+                                                        <div key={projectIndex} className={`projects-item ${project.repositoryName ? "" : "project-no-repository"}`} onClick={() => project.repositoryName ? window.open(`https://github.com/augustin-pasq/${project.repositoryName}`) : ""}>
                                                             <span className="projects-item-title">{project.name}</span>
                                                             <div className="projects-item-stack">
                                                                 {project.technos.map((techno, technoIndex) => (
@@ -239,6 +239,11 @@ export default function Home() {
                             </div>
                         </section>
                     </main>
+
+                    <footer>
+                        <span id="footer-mention">Fait avec ❤️ par Augustin</span>
+                        <span id="footer-name">{`Augustin Pasquier | Portfolio - ${(new Date().getFullYear())}`}</span>
+                    </footer>
                 </>
             }
         </>

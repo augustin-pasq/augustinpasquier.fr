@@ -2,6 +2,10 @@
 
     /******************** COMMON ********************/
 
+    body {
+        background-color: #f7f7f7;
+    }
+
     h2 {
         align-items: center;
         font-size: 1.75rem;
@@ -9,14 +13,9 @@
         text-align: left;
     }
 
-    main {
-        padding: 0 1rem;
-    }
-
     section {
         gap: 1rem;
-        margin: 3rem 0;
-        padding-top: 3rem;
+        padding: 3rem 1rem;
     }
 
     .section-text {
@@ -101,6 +100,7 @@
         font-size: 1.05rem;
         gap: 3rem;
         text-align: center;
+        margin-bottom: 3rem;
     }
 
     #header-text {
@@ -151,11 +151,6 @@
 
     /******************** CONTACT SECTION ********************/
 
-    #contact-section {
-        margin: 4rem 0 2rem 0;
-        padding: 4rem 1rem;
-    }
-
     #contact-section-text {
         margin-bottom: 2rem;
     }
@@ -167,5 +162,27 @@
     .connections-item-icon {
         height: 4.5rem;
         max-width: 4.5rem;
+    }
+
+
+
+    /******************** FOOTER ********************/
+
+    footer {
+        flex-direction: column;
+        font-size: 0.7rem;
+        gap: 0.5rem;
+        justify-content: center;
+        padding: 1rem 0;
+    }
+
+    #footer-mention {
+        text-align: center;
+        width: 100%;
+    }
+
+    #footer-name {
+        text-align: center;
+        width: 100%;
     }
 }
