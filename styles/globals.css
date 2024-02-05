@@ -427,7 +427,8 @@ picture {
 }
 
 #languages-section {
-    background: rgba(235, 228, 216, 0.15);
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(250, 249, 247, 1) 15%, rgba(250, 249, 247, 1) 85%, rgba(255, 255, 255, 1) 100%);
 }
 
 .tools {
