@@ -77,22 +77,7 @@ export default function Home() {
                 <>
                     <Head>
                         <title>Augustin Pasquier | Portfolio</title>
-                        <meta name="description" content="👋, moi c'est Augustin Pasquier, et je suis étudiant en BUT informatique, développeur web en alternance et passionné par la programmation."/>
                         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
-                        <link rel="icon" href="/favicon.ico"/>
-
-                        <meta property="og:url" content="https://augustinpasquier.fr"/>
-                        <meta property="og:type" content="website"/>
-                        <meta property="og:title" content="Augustin Pasquier | Portfolio"/>
-                        <meta property="og:description" content="👋, moi c'est Augustin Pasquier, et je suis étudiant en BUT informatique, développeur web en alternance et passionné par la programmation."/>
-                        <meta property="og:image" content="https://augustinpasquier.fr/images/opengraph_image.png"/>
-
-                        <meta name="twitter:card" content="summary_large_image"/>
-                        <meta property="twitter:domain" content="augustinpasquier.fr"/>
-                        <meta property="twitter:url" content="https://augustinpasquier.fr"/>
-                        <meta property="twitter:title" content="Augustin Pasquier | Portfolio"/>
-                        <meta property="twitter:description" content="👋, moi c'est Augustin Pasquier, et je suis étudiant en BUT informatique, développeur web en alternance et passionné par la programmation."/>
-                        <meta property="twitter:image" content="https://augustinpasquier.fr/images/opengraph_image.png"/>
                     </Head>
 
                     <CSSTransition in={displaySidebar} timeout={500} classNames="slide-left" unmountOnExit>
