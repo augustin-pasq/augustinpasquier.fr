@@ -43,7 +43,7 @@ export default async function handle(req, res) {
                     name: "LJDP (wip)",
                     technos: ["React.js", "Next.js", "Prisma", "MySQL"],
                     description: "Jeu multijoueur en ligne de devinettes à base de photos",
-                    repositoryName: "LJDP"
+                    repositoryName: null
                 },
                 {
                     name: "augustinpasquier.fr",
