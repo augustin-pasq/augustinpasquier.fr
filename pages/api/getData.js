@@ -1,13 +1,13 @@
 export default async function handle(req, res) {
     const events = [
+        { date: "Octobre - Juin 2018", text: "Projet scolaire avec une carte Arduino et un ruban LED" },
         { date: "Janvier 2018", text: "Stage de découverte de troisième dans une boutique de support informatique" },
-        { date: "Mai - Juin 2018", text: "Projet scolaire avec une carte Arduino et un ruban LED" },
         { date: "2019 - 2021", text: "Découverte du développement web via la création de bots Discord et de sites web" },
         { date: "Février 2021", text: "Stage de découverte et de pratique dans une agence de développement web" },
         { date: "Juin 2021", text: "Obtention du baccalauréat mention bien, spécialités mathématiques et physique chimie" },
         { date: "Septembre 2021", text: "Intégration du BUT informatique à l'IUT de Vannes" },
         { date: "Septembre 2022", text: "Début d'un contrat d'alternance pour du développement web dans la start-up vannetaise Imagina" },
-        { date: "Décembre 2023", text: "Participation à l'édition 2023 de l'évènement \"La Nuit de l'Info\", classé 2ème sur 654 soumissions" }
+        { date: "Décembre 2023", text: "Participation à l'édition 2023 de l'évènement \"La Nuit de l'Info\", en finissant 2<sup>ème</sup> sur 654 soumissions" }
     ]
 
     const languages = [
@@ -36,7 +36,7 @@ export default async function handle(req, res) {
                 {
                     name: "Alarm",
                     technos: ["Siri Shortcuts", "Express.js"],
-                    description: "Récupération du temps restant avant la prochaine alarme sur iPhone",
+                    description: "API de calcul du temps restant avant la prochaine alarme sur iPhone",
                     repositoryName: "Alarm"
                 },
                 {
@@ -60,7 +60,7 @@ export default async function handle(req, res) {
                 {
                     name: "TBO",
                     technos: ["React.js"],
-                    description: "Décompte avant le retour en période d'entreprise durant l'alternance",
+                    description: "Site web d'affichage d'un décompte avant le retour en période d'entreprise durant l'alternance",
                     repositoryName: "TBO"
                 },
                 {

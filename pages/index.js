@@ -66,7 +66,7 @@ export default function Home() {
         return (
             <div className="timeline-item">
                 <span className="timeline-item-date">{item.date}</span>
-                <p className="timeline-item-text">{item.text}</p>
+                <p className="timeline-item-text" dangerouslySetInnerHTML={{__html: item.text}}></p>
             </div>
         )
     }
@@ -138,9 +138,8 @@ export default function Home() {
                             <h2><span className="section-title-emoji">🔧</span>Des langages et des outils</h2>
 
                             <div className="section-text">
-                                <p>Depuis ma première ligne de code jusqu'à aujourd'hui, j'ai appris à me servir de tout
-                                    un tas de langages et outils. À l'aise avec certaines, envieux de progresser dans
-                                    d'autres, j'ai déjà utilisé toutes ces technologies.</p>
+                                <p>Depuis ma première ligne de code jusqu'à aujourd'hui, j'ai appris à me servir de multiples langages et outils. À l'aise avec certaines et envieux de progresser dans
+                                    d'autres, j'ai déjà utilisé toutes ces technologies :</p>
                             </div>
 
                             <div className="languages">
@@ -176,8 +175,8 @@ export default function Home() {
 
                             <div className="section-text">
                                 <p>Que ce soit sur mon temps personnel, à l'université ou en entreprise, j'ai développé
-                                    multiples applications et petits programmes. Chaque projet m'a permis d'apprendre ou
-                                    de m'améliorer dans une technologie.</p>
+                                    de nombreuses applications et petits programmes. Chaque projet m'a permis d'apprendre ou
+                                    de m'améliorer dans une ou plusieurs technologies.</p>
                                 <span>Le code de chacun d'entre eux est disponible sur GitHub.</span>
                             </div>
 
