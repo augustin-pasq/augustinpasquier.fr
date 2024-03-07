@@ -10,6 +10,7 @@ export default function Document() {
                 <meta property="og:url" content="https://augustinpasquier.fr"/>
                 <meta property="og:type" content="website"/>
                 <meta property="og:title" content="Augustin Pasquier | Portfolio"/>
+                <meta property="og:site_name" content="Augustin Pasquier | Portfolio"/>
                 <meta property="og:description" content="👋, moi c'est Augustin Pasquier, et je suis étudiant en BUT informatique, développeur web en alternance et passionné par la programmation."/>
                 <meta property="og:image" content="https://augustinpasquier.fr/images/opengraph-image.png"/>
 

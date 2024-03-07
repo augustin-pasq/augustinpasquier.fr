@@ -136,6 +136,12 @@ export default async function handle(req, res) {
                     repositoryName: "SAE-PNR"
                 },
                 {
+                    name: "Marienbad",
+                    technos: ["Java"],
+                    description: "Numérisation du jeu de Marienbad",
+                    repositoryName: "College-Numerique-56"
+                },
+                {
                     name: "Collège Numérique 56",
                     technos: ["HTML/CSS/JavaScript"],
                     description: "Site vitrine pour l'opération Collège Numérique 56",
