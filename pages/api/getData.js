@@ -19,12 +19,12 @@ export default async function handle(req, res) {
         { name: "SQL", value: 4, logo: "mysql" },
         { name: "Java", value: 3, logo: "java" },
         { name: "Python", value: 3, logo: "python" },
-        { name: "Android (Java)", value: 2, logo: "android" }
+        { name: "Android", value: 2, logo: "android" }
     ]
 
     const tools = [
         { name: "Linux", logo: "linux" },
-        { name: "WebStorm", logo: "webstorm" },
+        { name: "Suite JetBrains", logo: "jetbrains" },
         { name: "Visual Studio Code", logo: "vscode" },
         { name: "Postman", logo: "postman" },
         { name: "Git", logo: "git" }
