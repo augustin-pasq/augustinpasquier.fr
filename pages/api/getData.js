@@ -41,10 +41,10 @@ export default async function handle(req, res) {
                     repositoryName: "Alarm"
                 },
                 {
-                    name: "LJDP (wip)",
+                    name: "LJDP",
                     technos: ["React.js", "Next.js", "Prisma", "MySQL"],
                     description: "Jeu multijoueur en ligne de devinettes à base de photos",
-                    repositoryName: null
+                    repositoryName: "LJDP"
                 },
                 {
                     name: "augustinpasquier.fr",
