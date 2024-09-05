@@ -8,7 +8,9 @@ export default async function handle(req, res) {
         { date: "Septembre 2021", text: "Intégration du BUT informatique à l'IUT de Vannes" },
         { date: "Mai 2022", text: "Intervention dans une école primaire pour initier une classe de CE2-CM1 à la programmation" },
         { date: "Septembre 2022", text: "Début d'un contrat d'alternance pour du développement web et mobile dans la start-up vannetaise Imagina" },
-        { date: "Décembre 2023", text: "Participation à l'édition 2023 de l'évènement \"La Nuit de l'Info\", en finissant 2<sup>ème</sup> sur 654 soumissions" }
+        { date: "Décembre 2023", text: "Participation à l'édition 2023 de l'évènement \"La Nuit de l'Info\", en finissant 2<sup>ème</sup> sur 654 soumissions" },
+        { date: "Août 2024", text: "Obtention du BUT informatique" },
+        { date: "Septembre 2024", text: "Intégration de l'ENSSAT à Lannion et début d'un contrat d'alternance pour un poste d'ingénieur DevSecOps chez Orange" }
     ]
 
     const languages = [

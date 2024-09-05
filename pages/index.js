@@ -102,7 +102,7 @@ export default function Home() {
                                 <span id="title-heading"><span id="title-heading-emoji" className={movingHand ? "title-heading-emoji-animated" : ""} onAnimationEnd={() => setMovingHand(false)}>👋</span>, moi c'est</span>
                                 <h1>Augustin Pasquier</h1>
                                 <span id="carousel">et je suis 
-                                    <Carousel value={["étudiant en BUT informatique", "développeur web en alternance", "passionné par la programmation"]} numVisible={1} numScroll={1} orientation="vertical" circular autoplayInterval={1800} showIndicators={false} showNavigators={false} verticalViewPortHeight={"2rem"} itemTemplate={carouselItem}/>
+                                    <Carousel value={["étudiant à l'ENSSAT de Lannion", "ingénieur DevSecOps en alternance", "passionné par la programmation"]} numVisible={1} numScroll={1} orientation="vertical" circular autoplayInterval={1800} showIndicators={false} showNavigators={false} verticalViewPortHeight={"2rem"} itemTemplate={carouselItem}/>
                                 </span>
                             </div>
 
