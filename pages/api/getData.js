@@ -37,12 +37,6 @@ export default async function handle(req, res) {
             tabTitle: "Projets personnels",
             content: [
                 {
-                    name: "Alarm",
-                    technos: ["Siri Shortcuts", "Express.js"],
-                    description: "API de calcul du temps restant avant la prochaine alarme sur iPhone",
-                    repositoryName: "Alarm"
-                },
-                {
                     name: "LJDP",
                     technos: ["React.js", "Next.js", "Prisma", "MySQL"],
                     description: "Jeu multijoueur en ligne de devinettes à base de photos",
@@ -59,12 +53,6 @@ export default async function handle(req, res) {
                     technos: ["React.js", "PHP"],
                     description: "Application web produite à l'édition 2023 de la Nuit de l'Info",
                     repositoryName: "nuit-info-2023"
-                },
-                {
-                    name: "TBO",
-                    technos: ["React.js"],
-                    description: "Site web d'affichage d'un décompte avant le retour en période d'entreprise durant l'alternance",
-                    repositoryName: "TBO"
                 },
                 {
                     name: "Test Technique Alternance",
