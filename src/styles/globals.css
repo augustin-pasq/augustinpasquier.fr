@@ -2,14 +2,15 @@
 
 @font-face {
     font-family: "Montserrat";
-    src: url("../fonts/Montserrat.ttf") format("truetype");
+    src: url("../../fonts/Montserrat.ttf") format("truetype");
     font-style: normal;
+    font-weight: 400;
 }
 
 @font-face {
     font-family: "Linotte";
-    src: url("../fonts/Linotte-Bold.ttf") format("truetype"),
-         url('../fonts/Linotte-Bold.woff2') format("woff2");
+    src: url("../../fonts/Linotte-Bold.ttf") format("truetype"),
+         url('../../fonts/Linotte-Bold.woff2') format("woff2");
     font-style: normal;
     font-weight: 700;
 }
