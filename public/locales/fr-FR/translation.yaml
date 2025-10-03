@@ -1,0 +1,84 @@
+---
+
+# Header
+header.top: |
+  , moi c'est
+header.bottom: et je suis 
+header.carousel.item1: étudiant à l'ENSSAT de Lannion
+header.carousel.item2: ingénieur DevSecOps en alternance
+header.carousel.item3: passionné par la programmation
+header.contact: Me contacter
+picture.alt: Photo de profil
+
+# About
+about.title: Tout commence avec un ruban LED
+about.text1: En classe de troisième, je me vois mener un projet scolaire dont l'un des objectifs était de contrôler un ruban LED via une carte Arduino. Ce projet, c'est ma première confrontation à la programmation. C'est aussi le déclic qui me fera prendre conscience que c'est dans cette discipline que je veux m'illustrer.
+about.text2: |
+  Depuis, j'enchaîne les projets et m'investis à fond dans ma passion :
+
+# Events
+events.event1.date: Octobre - Juin 2018
+events.event1.text: Projet scolaire avec une carte Arduino et un ruban LED
+events.event2.date: Janvier 2018
+events.event2.text: Stage de découverte de troisième dans une boutique de support informatique
+events.event3.date: 2019 - 2021
+events.event3.text: Découverte du développement web via la création de bots Discord et de sites web
+events.event4.date: Février 2021
+events.event4.text: Stage de découverte et de pratique dans une agence de développement web
+events.event5.date: Juin 2021
+events.event5.text: Obtention du baccalauréat mention bien, spécialités mathématiques et physique chimie, section européenne anglais
+events.event6.date: Septembre 2021
+events.event6.text: Intégration du BUT informatique à l'IUT de Vannes
+events.event7.date: Mai 2022
+events.event7.text: Intervention dans une école primaire pour initier une classe de CE2-CM1 à la programmation
+events.event8.date: Septembre 2022
+events.event8.text: Début d'un contrat d'alternance pour du développement web et mobile dans la start-up vannetaise Imagina
+events.event9.date: Décembre 2023
+events.event9.text: Participation à l'édition 2023 de l'évènement "La Nuit de l'Info", en finissant 2<sup>ème</sup> sur 654 soumissions
+events.event10.date: Août 2024
+events.event10.text: Obtention du BUT informatique, classé 2<sup>ème</sup> sur 53
+events.event11.date: Septembre 2024
+events.event11.text: Intégration de l'ENSSAT à Lannion et début d'un contrat d'alternance pour un poste d'ingénieur DevSecOps chez Orange
+
+# Languages
+languages.title: Des langages et des outils
+languages.text: |
+  Depuis ma première ligne de code jusqu'à aujourd'hui, j'ai appris à me servir de multiples langages et outils. À l'aise avec certaines et envieux de progresser dans d'autres, j'ai déjà utilisé toutes ces technologies :
+
+# Tools
+tools.jetbrains.name: Suite JetBrains
+
+# Projects
+projects.title: Mes projets
+projects.text1: Que ce soit sur mon temps personnel, à l'université ou en entreprise, j'ai développé de nombreuses applications et petits programmes. Chaque projet m'a permis d'apprendre ou de m'améliorer dans une ou plusieurs technologies.
+projects.text2: Le code de chacun d'entre eux est disponible sur GitHub.
+
+projects.personals.tabTitle: Projets personnels
+projects.personals.project1.description: Jeu multijoueur en ligne de devinettes à base de photos
+projects.personals.project2.description: Portfolio
+projects.personals.project3.description: Application web produite à l'édition 2023 de la Nuit de l'Info
+projects.personals.project4.description: Application Android produite pour un test technique lors de la recherche d'alternance
+projects.personals.project5.description: Bot Discord pour souhaiter les anniversaires et faire du bruit dans les salons vocaux
+projects.personals.project6.description: Bot Discord de prévisions météo
+
+projects.university.tabTitle: Projets universitaires
+projects.university.project1.description: Implémentation du jeu de société Punto avec 4 bases de données
+projects.university.project2.description: Application Android de gestion des tâches (ToDo-List)
+projects.university.project3.description: Application web de gestion des tâches (ToDo-List)
+projects.university.project4.description: Application Android pour convertir les degrés Celsius en Fahrenheit (et inversement)
+projects.university.project5.description: Application web de prévisions météo
+projects.university.project6.description: Panneau d'administration/Catalogue pour un concessionaire automobile
+projects.university.project7.description: Application web de suivi d'activités sportives
+projects.university.project8.description: Application de bureau de saisie d'observations de faune locale
+projects.university.project9.description: Numérisation du jeu de Marienbad
+projects.university.project10.description: Site vitrine pour l'opération Collège Numérique 56
+
+projects.professionals.tabTitle: Projets professionnels
+projects.professionals.project1.description: Contribution aux applications web et Android Imagina ainsi qu'au site vitrine de l'entreprise
+
+# Contact
+contact.title: Envie de me contacter ?
+contact.text: Vous pouvez m'envoyer un mail ainsi que me retrouver sur GitHub et LinkedIn.
+
+# Footer
+footer.text: Fait avec ❤️ par Augustin

@@ -1,0 +1,290 @@
+{
+  "events": [
+    {
+      "date": "events.event1.date",
+      "text": "events.event1.text"
+    },
+    {
+      "date": "events.event2.date",
+      "text": "events.event2.text"
+    },
+    {
+      "date": "events.event3.date",
+      "text": "events.event3.text"
+    },
+    {
+      "date": "events.event4.date",
+      "text": "events.event4.text"
+    },
+    {
+      "date": "events.event5.date",
+      "text": "events.event5.text"
+    },
+    {
+      "date": "events.event6.date",
+      "text": "events.event6.text"
+    },
+    {
+      "date": "events.event7.date",
+      "text": "events.event7.text"
+    },
+    {
+      "date": "events.event8.date",
+      "text": "events.event8.text"
+    },
+    {
+      "date": "events.event9.date",
+      "text": "events.event9.text"
+    },
+    {
+      "date": "events.event10.date",
+      "text": "events.event10.text"
+    },
+    {
+      "date": "events.event11.date",
+      "text": "events.event11.text"
+    }
+  ],
+  "languages": [
+    {
+      "name": "HTML/CSS",
+      "value": 5,
+      "logo": "html"
+    },
+    {
+      "name": "JavaScript",
+      "value": 4,
+      "logo": "javascript"
+    },
+    {
+      "name": "PHP",
+      "value": 4,
+      "logo": "php"
+    },
+    {
+      "name": "React.js",
+      "value": 4,
+      "logo": "react"
+    },
+    {
+      "name": "SQL",
+      "value": 4,
+      "logo": "mysql"
+    },
+    {
+      "name": "Java",
+      "value": 3,
+      "logo": "java"
+    },
+    {
+      "name": "Python",
+      "value": 3,
+      "logo": "python"
+    },
+    {
+      "name": "Android",
+      "value": 2,
+      "logo": "android"
+    }
+  ],
+  "tools": [
+    {
+      "name": "Linux",
+      "logo": "linux"
+    },
+    {
+      "name": "tools.jetbrains.name",
+      "logo": "jetbrains"
+    },
+    {
+      "name": "Visual Studio Code",
+      "logo": "vscode"
+    },
+    {
+      "name": "Postman",
+      "logo": "postman"
+    },
+    {
+      "name": "Git",
+      "logo": "git"
+    }
+  ],
+  "projects": {
+    "personals": {
+      "tabTitle": "projects.personals.tabTitle",
+      "content": [
+        {
+          "name": "LJDP",
+          "technos": [
+            "React.js",
+            "Next.js",
+            "Prisma",
+            "MySQL"
+          ],
+          "description": "projects.personals.project1.description",
+          "url": "https://github.com/augustin-pasq/LJDP"
+        },
+        {
+          "name": "augustinpasquier.fr",
+          "technos": [
+            "React.js",
+            "Next.js"
+          ],
+          "description": "projects.personals.project2.description",
+          "url": "https://github.com/augustin-pasq/augustinpasquier.fr"
+        },
+        {
+          "name": "Nuit de l'Info 2023",
+          "technos": [
+            "React.js",
+            "PHP"
+          ],
+          "description": "projects.personals.project3.description",
+          "url": "https://github.com/augustin-pasq/nuit-info-2023"
+        },
+        {
+          "name": "Test Technique Alternance",
+          "technos": [
+            "Android (Java)"
+          ],
+          "description": "projects.personals.project4.description",
+          "url": "https://github.com/augustin-pasq/Test-Technique-Alternance"
+        },
+        {
+          "name": "Patrick Sébastien",
+          "technos": [
+            "JavaScript"
+          ],
+          "description": "projects.personals.project5.description",
+          "url": "https://github.com/augustin-pasq/Patrick-Sebastien"
+        },
+        {
+          "name": "Évelyne Dhéliat",
+          "technos": [
+            "JavaScript"
+          ],
+          "description": "projects.personals.project6.description",
+          "url": "https://github.com/augustin-pasq/Evelyne-Dheliat"
+        }
+      ]
+    },
+    "university": {
+      "tabTitle": "projects.university.tabTitle",
+      "content": [
+        {
+          "name": "Punto",
+          "technos": [
+            "React.js",
+            "Next.js",
+            "Prisma",
+            "MySQL",
+            "MongoDB",
+            "SQLite",
+            "Neo4j"
+          ],
+          "description": "projects.university.project1.description",
+          "url": "https://github.com/augustin-pasq/projets-iut/tree/punto"
+        },
+        {
+          "name": "Application ToDo Android",
+          "technos": [
+            "Android (Java)"
+          ],
+          "description": "projects.university.project2.description",
+          "url": "https://github.com/augustin-pasq/projets-iut/tree/application-todo-android"
+        },
+        {
+          "name": "Application ToDo Web",
+          "technos": [
+            "Vue.js"
+          ],
+          "description": "projects.university.project3.description",
+          "url": "https://github.com/augustin-pasq/projets-iut/tree/application-todo-web"
+        },
+        {
+          "name": "Convertisseur de température",
+          "technos": [
+            "Android (Java)"
+          ],
+          "description": "projects.university.project4.description",
+          "url": "https://github.com/augustin-pasq/projets-iut/tree/convertisseur-temperature"
+        },
+        {
+          "name": "Application Météo",
+          "technos": [
+            "HTML/CSS/JavaScript",
+            "Vue.js"
+          ],
+          "description": "projects.university.project5.description",
+          "url": "https://github.com/augustin-pasq/projets-iut/tree/application-meteo"
+        },
+        {
+          "name": "Projet NoSQL",
+          "technos": [
+            "React.js",
+            "Next.js",
+            "Prisma",
+            "MongoDB"
+          ],
+          "description": "projects.university.project6.description",
+          "url": "https://github.com/augustin-pasq/projets-iut/tree/projet-nosql"
+        },
+        {
+          "name": "SportTrack",
+          "technos": [
+            "HTML/CSS",
+            "Express.js",
+            "PHP",
+            "SQLite"
+          ],
+          "description": "projects.university.project7.description",
+          "url": "https://github.com/augustin-pasq/projets-iut/tree/sporttrack"
+        },
+        {
+          "name": "PNR",
+          "technos": [
+            "Java",
+            "JavaFX",
+            "MySQL"
+          ],
+          "description": "projects.university.project8.description",
+          "url": "https://github.com/augustin-pasq/SAE-PNR"
+        },
+        {
+          "name": "Marienbad",
+          "technos": [
+            "Java"
+          ],
+          "description": "projects.university.project9.description",
+          "url": "https://github.com/augustin-pasq/projets-iut/tree/marienbad"
+        },
+        {
+          "name": "Collège Numérique 56",
+          "technos": [
+            "HTML/CSS/JavaScript"
+          ],
+          "description": "projects.university.project10.description",
+          "url": "https://github.com/augustin-pasq/projets-iut/tree/college-numerique-56"
+        }
+      ]
+    },
+    "professionals": {
+      "tabTitle": "projects.professionals.tabTitle",
+      "content": [
+        {
+          "name": "Imagina",
+          "technos": [
+            "React.js",
+            "Symfony",
+            "PHP",
+            "Doctrine",
+            "Android (Kotlin)",
+            "HTML/CSS/JavaScript"
+          ],
+          "description": "projects.professionals.project1.description",
+          "url": "https://imagina.com"
+        }
+      ]
+    }
+  }
+}

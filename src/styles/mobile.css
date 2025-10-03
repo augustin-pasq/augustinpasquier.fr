@@ -30,6 +30,14 @@
 
     /******************** NAVIGATION BUTTONS ********************/
 
+    #sidebar-mobile {
+        bottom: 2rem;
+        display: block;
+        left: 2rem;
+        position: fixed;
+        z-index: 1;
+    }
+
     .about-icon:before {
         content: "💡";
     }
@@ -38,11 +46,13 @@
         content: "🔧";
     }
 
+    .projects-icon:before {
+        content: "🏗️";
+    }
+
     .p-speeddial {
-        bottom: 2rem;
-        left: 2rem;
+        position: static;
         gap: 1.6rem;
-        position: fixed;
     }
 
     .p-speeddial-action {

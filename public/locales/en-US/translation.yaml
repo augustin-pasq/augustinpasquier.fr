@@ -1,0 +1,84 @@
+---
+
+# Header
+header.top: |
+  , my name is
+header.bottom: and I'm 
+header.carousel.item1: a student at ENSSAT in Lannion
+header.carousel.item2: a DevSecOps engineer by apprenticeship
+header.carousel.item3: passionate about programming
+header.contact: Contact me
+picture.alt: Profile picture
+
+# About
+about.title: It all started with an LED strip
+about.text1: In ninth grade, I led a school project where one of the goals was to control an LED strip using an Arduino board. This project was my first encounter with programming — and the spark that made me realize this was the field I wanted to pursue.
+about.text2: |
+  Since then, I’ve been working on project after project, fully investing myself in my passion:
+
+# Events
+events.event1.date: October - June 2018
+events.event1.text: School project using an Arduino board and an LED strip
+events.event2.date: January 2018
+events.event2.text: Middle school internship in a computer support shop
+events.event3.date: 2019 - 2021
+events.event3.text: Discovery of web development through the creation of Discord bots and websites
+events.event4.date: February 2021
+events.event4.text: Internship in a web development agency for discovery and hands-on experience
+events.event5.date: June 2021
+events.event5.text: Obtained the French Baccalaureate with honors (“mention bien”), majoring in Mathematics and Physics-Chemistry, European English section
+events.event6.date: September 2021
+events.event6.text: Joined the Computer Science Bachelor’s degree (BUT Informatique) at IUT of Vannes
+events.event7.date: May 2022
+events.event7.text: Presentation in a primary school to introduce a CE2-CM1 class (8–10 years old) to programming
+events.event8.date: September 2022
+events.event8.text: Started a work-study program in web and mobile development at the Vannes-based startup Imagina
+events.event9.date: December 2023
+events.event9.text: Participated in the 2023 edition of the “Nuit de l’Info” event, finishing 2<sup>nd</sup> out of 654 submissions
+events.event10.date: August 2024
+events.event10.text: Obtained the Computer Science Bachelor’s degree (BUT), ranked 2<sup>nd</sup> out of 53
+events.event11.date: September 2024
+events.event11.text: Joined ENSSAT in Lannion and started a work-study program as a DevSecOps engineer at Orange
+
+# Languages
+languages.title: Some languages and tools
+languages.text: |
+  From my very first line of code to today, I’ve learned to use many different languages and tools. Comfortable with some and eager to improve in others, I’ve already worked with all of these technologies:
+
+# Tools
+tools.jetbrains.name: JetBrains Suite
+
+# Projects
+projects.title: My Projects
+projects.text1: Whether during my personal time, at university, or in a company, I’ve developed many applications and small programs. Each project has allowed me to learn or improve in one or more technologies.
+projects.text2: The source code for each of them is available on GitHub.
+
+projects.personals.tabTitle: Personal projects
+projects.personals.project1.description: Online multiplayer guessing game based on photos
+projects.personals.project2.description: Portfolio
+projects.personals.project3.description: Web application created during the 2023 edition of "La Nuit de l’Info"
+projects.personals.project4.description: Android app developed for a technical test during my apprenticeship research
+projects.personals.project5.description: Discord bot to wish birthdays and make noise in voice channels
+projects.personals.project6.description: Discord bot for weather forecasts
+
+projects.university.tabTitle: University projects
+projects.university.project1.description: Implementation of the board game Punto with 4 different databases
+projects.university.project2.description: Android task management app (To-Do List)
+projects.university.project3.description: Web task management app (To-Do List)
+projects.university.project4.description: Android app to convert Celsius to Fahrenheit (and vice versa)
+projects.university.project5.description: Web application for weather forecasts
+projects.university.project6.description: Admin panel and catalog for a car dealership
+projects.university.project7.description: Web app for tracking sports activities
+projects.university.project8.description: Desktop application for recording local wildlife observations
+projects.university.project9.description: Digital version of the Marienbad game
+projects.university.project10.description: Showcase website for the "Collège Numérique 56" initiative
+
+projects.professionals.tabTitle: Professional projects
+projects.professionals.project1.description: Contribution to the Imagina web and Android applications as well as the company’s showcase website
+
+# Contact
+contact.title: Want to get in touch?
+contact.text: You can send me an email, or find me on GitHub and LinkedIn.
+
+# Footer
+footer.text: Made with ❤️ by Augustin
