@@ -8,7 +8,7 @@ Parcours personnel, langages et outils maitrisés, projets réalisés, contact.
 
 ## Stack technologique
 
-- React + Next.js
+- React + Vite
 - PrimeReact pour certains composants
 
 ## Lancer localement
@@ -26,5 +26,5 @@ npm run dev
 Build puis lancement :
 ```bash
 npm run build
-npm run start
+npm run preview
 ```
